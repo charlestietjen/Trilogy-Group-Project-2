@@ -9,8 +9,17 @@
     --clr-char: 44, 44, 44 ;
 
     --ff-l: 'Bellefair', serif;
-    --ff-m: 'Quicksand', sans-serif;
+    --ff-m: 'Bebas Neue', sans-serif;
     --ff-s: 'Inter', sans-serif;
+
+    --fs-9: 7rem;
+    --fs-8: 5rem;
+    --fs-7: 3.5rem;
+    --fs-6: 2rem;
+    --fs-5: 1.75rem;
+    --fs-4: 1.25rem;
+    --fs-3: 1rem;
+    --fs-2: 0.875rem;
 
 
 }
@@ -136,29 +145,17 @@ header {
 
 header h1 {background-color: rgb( var(--clr-char));
     color: whitesmoke;
-    letter-spacing: 4px;
+    letter-spacing: 0.5rem;
     padding: 0.8rem 3rem;
-    font-size: 32px;
     text-align: right;
     width:100%;
     display: block;
-    font-family: var(--ff-l);
+    font-family: var(--ff-m);
+    font-size: var(--fs-6);
   }
 
 .fade {
     opacity: 0.5;
-}
-
-.knockouth2 {
-    font-family: var(--ff-m);
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    background: 
-    linear-gradient(rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
-    background-blend-mode: screen;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 section {
@@ -220,7 +217,44 @@ section {
     padding-inline: 1.5em;
 }
 
-.text-example {
+.spacer {
     margin: 1rem 0;
 }
 
+.tf-example-h1 {
+    font-family:var(--ff-l);
+    font-size:var(--fs-9);
+}
+
+.tf-example-h2 {
+    font-family:var(--ff-l);
+    font-size:var(--fs-8);
+}
+
+.tf-example-h3 {
+    font-family:var(--ff-m);
+    font-size:var(--fs-6);
+}
+
+.tf-example-h4 {
+    font-family:var(--ff-l);
+    font-size:var(--fs-5);
+}
+
+.tf-example-h5 {
+    font-family:var(--ff-m);
+    font-size:var(--fs-4);
+}
+
+.knockouth2 {
+    font-family: var(--ff-m);
+    font-size: var(--fs-6);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: 
+    linear-gradient(rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
+    background-blend-mode: screen;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
