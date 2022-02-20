@@ -7,6 +7,8 @@
     --clr-2nd: 196, 113, 237 ;
     --clr-3rd: 246, 79, 89 ;
     --clr-char: 44, 44, 44 ;
+    --clr-blk: 0, 0, 0 ;
+    --clr-wht: 245, 245, 245 ;
 
     --ff-l: 'Bellefair', serif;
     --ff-m: 'Bebas Neue', sans-serif;
@@ -88,6 +90,10 @@ select {
     justify-content: space-between;
 }
 
+.spacer {
+    margin: 1rem 0;
+}
+
 /*---------------*/
 /* Colours       */
 /*---------------*/
@@ -105,7 +111,7 @@ select {
 }
 
 .bg-black {
-    background-color: black;
+    background-color:rgb( var(--clr-blk));
 }
 
 .bg-char {
@@ -125,11 +131,11 @@ select {
 }
 
 .text-black {
-    color: black;
+    color: rgb( var(--clr-blk));
 }
 
 .text-white {
-    color: whitesmoke;
+    color: rgb( var(--clr-wht));
 }
 
 
@@ -144,7 +150,7 @@ header {
 }
 
 header h1 {background-color: rgb( var(--clr-char));
-    color: whitesmoke;
+    color: rgb( var(--clr-wht));
     letter-spacing: 0.5rem;
     padding: 0.8rem 3rem;
     text-align: right;
@@ -217,9 +223,7 @@ section {
     padding-inline: 1.5em;
 }
 
-.spacer {
-    margin: 1rem 0;
-}
+
 
 .tf-example-h1 {
     font-family:var(--ff-l);
