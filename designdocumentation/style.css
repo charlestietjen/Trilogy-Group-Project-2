@@ -1,0 +1,226 @@
+/*---------------*/
+/* Custom Props  */
+/*---------------*/
+
+:root {
+    --clr-main: 180, 194, 233 ;
+    --clr-2nd: 196, 113, 237 ;
+    --clr-3rd: 246, 79, 89 ;
+    --clr-char: 44, 44, 44 ;
+
+    --ff-l: 'Bellefair', serif;
+    --ff-m: 'Quicksand', sans-serif;
+    --ff-s: 'Inter', sans-serif;
+
+
+}
+
+/*---------------*/
+/* Reset         */
+/*---------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    font-weight: 400;
+}
+
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: var(--ff-s);
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*---------------*/
+/* Utilities     */
+/*---------------*/
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.wrapper {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+    justify-content: space-between;
+}
+
+/*---------------*/
+/* Colours       */
+/*---------------*/
+
+.bg-main {
+    background-color:rgb( var(--clr-main));
+}
+
+.bg-2nd {
+    background-color:rgb( var(--clr-2nd));
+}
+
+.bg-3rd {
+    background-color:rgb( var(--clr-3rd));
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-char {
+    background-color: rgb( var(--clr-char));
+}
+
+.text-main {
+    color:rgb( var(--clr-main));
+}
+
+.text-2nd {
+    color:rgb( var(--clr-2nd));
+}
+
+.text-3rd {
+    color:rgb( var(--clr-3rd));
+}
+
+.text-black {
+    color: black;
+}
+
+.text-white {
+    color: whitesmoke;
+}
+
+
+/*---------------*/
+/* Components    */
+/*---------------*/
+
+header {
+    width: 100%;
+    display:block;
+    margin-bottom: 2em;
+}
+
+header h1 {background-color: rgb( var(--clr-char));
+    color: whitesmoke;
+    letter-spacing: 4px;
+    padding: 0.8rem 3rem;
+    font-size: 32px;
+    text-align: right;
+    width:100%;
+    display: block;
+    font-family: var(--ff-l);
+  }
+
+.fade {
+    opacity: 0.5;
+}
+
+.knockouth2 {
+    font-family: var(--ff-m);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: 
+    linear-gradient(rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
+    background-blend-mode: screen;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.box-parent {
+    width: 32%;
+}
+
+.box {
+    padding: 3rem 1rem 1rem;
+}
+
+
+.bar {
+    padding: 3rem 1rem 1rem;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb( var(--clr-main)) , rgb( var(--clr-2nd)), rgb( var(--clr-3rd)));
+}
+
+.colordisplay {
+    margin: 1rem 0;
+    padding: 3rem, 1rem, 1rem;
+    border: whitesmoke solid 1px;
+    box-shadow: 3px 3px 7px rgba(15, 15, 15, 0.5);
+}
+
+.glassdisplay {
+    margin: 1rem 0;
+    padding: 3rem, 1rem, 1rem;
+    border: solid 3px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px rgba(15, 15, 15, 0.5);
+}
+
+.bg-main-fade {
+    background-image: linear-gradient(to right, rgba( var(--clr-main), 0.7 ) , rgba( var(--clr-main), 0.2));
+    border-color:rgba( var(--clr-main), 0.1);
+}
+
+.bg-2nd-fade {
+    background-image: linear-gradient(to right, rgba( var(--clr-2nd), 0.7 ) , rgba( var(--clr-2nd), 0.2));
+    border-color:rgba( var(--clr-2nd), 0.1)
+}
+
+.bg-3rd-fade {
+    background-image: linear-gradient(to right, rgba( var(--clr-3rd), 0.7 ) , rgba( var(--clr-3rd), 0.2));
+    border-color:rgba( var(--clr-3rd), 0.1)
+}
+
+/*------------------------*/
+/* Typeface Components    */
+/*------------------------*/
+
+.column {
+    width: 49%;
+    padding-inline: 1.5em;
+}
+
+.text-example {
+    margin: 1rem 0;
+}
+
