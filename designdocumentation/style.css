@@ -23,6 +23,10 @@
     --fs-3: 1rem;
     --fs-2: 0.875rem;
 
+    --ls-1: 1.8px; 
+    --ls-2: 2.35px;
+    --ls-3: 4.75px;
+    --ls-4: 8px;
 
 }
 
@@ -151,7 +155,7 @@ header {
 
 header h1 {background-color: rgb( var(--clr-char));
     color: rgb( var(--clr-wht));
-    letter-spacing: 0.5rem;
+    letter-spacing: var(--ls-4);
     padding: 0.8rem 3rem;
     text-align: right;
     width:100%;
@@ -188,7 +192,7 @@ section {
     margin: 1rem 0;
     padding: 3rem, 1rem, 1rem;
     border: rgb( var(--clr-wht)) solid 1px;
-    box-shadow: 3px 3px 7px rgba(15, 15, 15, 0.5);
+    box-shadow: 3px 3px 7px rgba( var(--clr-blk), 0.4);
 }
 
 .glassdisplay {
@@ -196,7 +200,7 @@ section {
     padding: 3rem, 1rem, 1rem;
     border: solid 3px;
     border-radius: 5px;
-    box-shadow: 3px 3px 7px rgba(15, 15, 15, 0.5);
+    box-shadow: 3px 3px 7px rgba( var(--clr-blk), 0.4);
 }
 
 .bg-main-fade {
@@ -231,21 +235,27 @@ section {
 .tf-h2 {
     font-family:var(--ff-l);
     font-size:var(--fs-8);
+    letter-spacing: var(--ls-3);
+
 }
 
 .tf-h3 {
     font-family:var(--ff-m);
     font-size:var(--fs-6);
+    letter-spacing: var(--ls-2);
 }
 
 .tf-h4 {
     font-family:var(--ff-l);
-    font-size:var(--fs-5);
+    font-size:var(--fs-6);
+    text-shadow: 7px 7px 5px rgba( var(--clr-blk), 0.7);
+    letter-spacing: var(--ls-4);
 }
 
 .tf-h5 {
     font-family:var(--ff-m);
     font-size:var(--fs-4);
+    letter-spacing: var(--ls-1);
 }
 
 .tf-p1 {
@@ -257,12 +267,11 @@ section {
     font-family:var(--ff-s);
     font-size:var(--fs-2);
     font-weight: 200;
-    letter-spacing: 0.1rem ;
+    letter-spacing: var(--ls-1);
+    line-height: 1.7;
 }
 
 .knockouth2 {
-    font-family: var(--ff-m);
-    font-size: var(--fs-6);
     display: block;
     width: 100%;
     padding: 1rem;
