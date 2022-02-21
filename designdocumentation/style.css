@@ -98,6 +98,10 @@ select {
     margin: 1rem 0;
 }
 
+.center {
+    justify-content: center;
+}
+
 /*---------------*/
 /* Colours       */
 /*---------------*/
@@ -155,13 +159,11 @@ header {
 
 header h1 {background-color: rgb( var(--clr-char));
     color: rgb( var(--clr-wht));
-    letter-spacing: var(--ls-4);
     padding: 0.8rem 3rem;
     text-align: right;
     width:100%;
     display: block;
-    font-family: var(--ff-m);
-    font-size: var(--fs-6);
+    font-family: var(ff-m);
   }
 
 .fade {
@@ -175,6 +177,7 @@ section {
 
 .box-parent {
     width: 32%;
+    flex-grow: 1;
 }
 
 .box {
@@ -227,6 +230,10 @@ section {
     padding-inline: 1.5em;
 }
 
+.sectiontitle-parent {
+    width: 100%;
+}
+
 .tf-h1 {
     font-family:var(--ff-l);
     font-size:var(--fs-9);
@@ -248,7 +255,6 @@ section {
 .tf-h4 {
     font-family:var(--ff-l);
     font-size:var(--fs-6);
-    text-shadow: 7px 7px 5px rgba( var(--clr-blk), 0.7);
     letter-spacing: var(--ls-4);
 }
 
@@ -256,6 +262,13 @@ section {
     font-family:var(--ff-m);
     font-size:var(--fs-4);
     letter-spacing: var(--ls-1);
+}
+
+.tf-header1 {
+        font-family:var(--ff-m);
+        font-size:var(--fs-6);
+        letter-spacing: var(--ls-4);
+    
 }
 
 .tf-p1 {
@@ -272,11 +285,10 @@ section {
 }
 
 .knockouth2 {
-    display: block;
-    width: 100%;
+    width: fit-content;
     padding: 1rem;
     background: 
-    linear-gradient(rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
+    linear-gradient(to right, rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
     background-blend-mode: screen;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
