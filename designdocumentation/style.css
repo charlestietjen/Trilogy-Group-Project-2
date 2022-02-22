@@ -94,6 +94,13 @@ select {
     justify-content: space-between;
 }
 
+.wrapper-full {
+    padding: 1em 2em 0;
+    margin-inline: auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .spacer {
     margin: 1rem 0;
 }
@@ -101,6 +108,17 @@ select {
 .center {
     justify-content: center;
 }
+
+.eventlimiter {
+    height:fit-content;
+    overflow: hidden;
+}
+
+.push-parent {
+    height: calc( 100% - 6em );
+    margin-bottom: 3em;
+}
+
 
 /*---------------*/
 /* Colours       */
@@ -313,22 +331,19 @@ section {
 /*-----------------------------*/
 
 .dashboard {
-    align-items: center;
     margin-inline: auto;
     max-width: 75rem;
     height: 100vh;
     justify-content: space-between;
-    background-color: aqua;
     background-image: url('assets/space1.png');
     border-radius: 20px;
     overflow:hidden;
     background-position: center;
-    position: relative;
 }
 
 .blurfilter {
     width: 100%;
-    height: 8%;
+    height: 10vh;
     backdrop-filter: blur(5px);
     background-image: linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-3rd), 0.17 ) );
     box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4); 
@@ -336,14 +351,31 @@ section {
 
 .scroller {
     width: 60%;
-    height: 70%;
-    margin: 1em auto;
+    height: 70vh;
     background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0));
     border-color:rgba( var(--clr-main), 0.2);
     backdrop-filter: blur(3px);
     box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4);
     border-radius: 15px;
-    position:absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    margin: auto;
+    margin: 5vh auto;
 }
+
+.sidebar {
+    width: 20%;
+    background-color: aqua;
+}
+
+.pushbox {
+    width: 50%;
+    background-image: url('assets/space1.png');
+    border-radius: 20px;
+    background-position: center;
+    box-shadow: inset 0px 5px 30px 15px rgba( var(--clr-blk), 0.8);
+}
+
+.banner {
+    height: fit-content;
+    padding-inline: 3.2em;
+}
+
+
