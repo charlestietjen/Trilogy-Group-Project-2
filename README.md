@@ -1,5 +1,12 @@
 # Trilogy-Group-Project-2 - Space your Problems (working title)
 
+Running the server locally requires a .env file with the following information:
+SECRET='a secret'
+DB_USER='root'
+DB_PW='password'
+DB_NAME='space_problems_db'
+
+Where DB_ variables are your local SQL credentials and an existing database. Secret can be anything, more important for when the page is live.
 
 ## Temporary Home for Project Aims
 
