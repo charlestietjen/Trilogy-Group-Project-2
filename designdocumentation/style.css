@@ -147,9 +147,9 @@ select {
 }
 
 
-/*---------------*/
-/* Components    */
-/*---------------*/
+/*----------------------*/
+/* Colour Components    */
+/*----------------------*/
 
 header {
     width: 100%;
@@ -228,6 +228,7 @@ section {
 .column {
     width: 49%;
     padding-inline: 1.5em;
+    flex-grow: 1;
 }
 
 .sectiontitle-parent {
@@ -243,7 +244,7 @@ section {
     font-family:var(--ff-l);
     font-size:var(--fs-8);
     letter-spacing: var(--ls-3);
-
+    width: fit-content;
 }
 
 .tf-h3 {
@@ -265,10 +266,9 @@ section {
 }
 
 .tf-header1 {
-        font-family:var(--ff-m);
-        font-size:var(--fs-6);
-        letter-spacing: var(--ls-4);
-    
+    font-family:var(--ff-m);
+    font-size:var(--fs-6);
+    letter-spacing: var(--ls-4);    
 }
 
 .tf-p1 {
@@ -288,7 +288,7 @@ section {
     width: fit-content;
     padding: 1rem;
     background: 
-    linear-gradient(to right, rgb(var(--clr-main)), rgb(var(--clr-2nd)),  rgb(var(--clr-3rd)));
+    linear-gradient(to right, rgb(var(--clr-main)), rgb(var(--clr-2nd)), rgb(var(--clr-3rd)));
     background-blend-mode: screen;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -306,4 +306,44 @@ section {
     text-shadow: 0px 0px 10px rgba( var(--clr-wht), 0.5), 
                  10px 10px 5px rgba( var(--clr-blk), 0.1);
                  transition: 1s;
+}
+
+/*-----------------------------*/
+/* Component... components?    */
+/*-----------------------------*/
+
+.dashboard {
+    align-items: center;
+    margin-inline: auto;
+    max-width: 75rem;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: aqua;
+    background-image: url('assets/space1.png');
+    border-radius: 20px;
+    overflow:hidden;
+    background-position: center;
+    position: relative;
+}
+
+.blurfilter {
+    width: 100%;
+    height: 8%;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-3rd), 0.17 ) );
+    box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4); 
+}
+
+.scroller {
+    width: 60%;
+    height: 70%;
+    margin: 1em auto;
+    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0));
+    border-color:rgba( var(--clr-main), 0.2);
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4);
+    border-radius: 15px;
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
 }
