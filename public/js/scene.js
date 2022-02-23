@@ -1,5 +1,6 @@
 import * as THREE from './three.module.js';
 
+// const sceneEl = document.querySelector('#scene');
 const globeTex = new THREE.TextureLoader().load('../assets/img/globe/globe.jpg');
 
 let scene, camera, renderer, skyboxGeo, skybox, globeGeo, globe, globeMat;
