@@ -7,18 +7,12 @@ router.get('/', (req, res) => {
     Post.findAll({
         // 
         attributes: ['id', 'text', 
-        // [sequelize.literal('(SELECT COUNT(*) FROM like WHERE post.id = like.post_id)'), 'like_count']
         ],
         include: [{
             model: User,
             attributes: ['email']
         },
-        {
-            model: User,
-            attributes: ['id'],
-            through: Like,
-            as: 'liked_posts'
-        }]
+        ]
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -35,20 +29,13 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'text',
-            'created_at'
-            // [sequelize.literal('(SELECT COUNT(*) FROM like WHERE post.id = like.post_id)'), 'like_count']
+            'created_at',
         ],
         include: [
             {
                 model: User,
                 attributes: ['email']
-            },           
-            {
-                model: User,
-                attributes: ['id'],
-                through: Like,
-                as: 'liked_posts'
-            }
+            },
         ]
     })
     .then(dbPostData => {
@@ -56,7 +43,20 @@ router.get('/:id', (req, res) => {
             res.status(404).json({ message: 'Post not found' });
             return;
         }
-        res.json(dbPostData);
+        Like.findAndCountAll({
+            where: {
+                post_id: req.params.id
+            }
+        })
+        .then(dbLikeData =>{
+            dbPostData.dataValues.likeCount = dbLikeData.count
+            console.log(dbPostData)
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
     })
     .catch(err => {
         console.log(err);
