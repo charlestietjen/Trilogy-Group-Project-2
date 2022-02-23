@@ -28,9 +28,9 @@ Deletes user at given id
 
 ('like' metric tracking is err...bad right now. to be fixed)
 - Get all posts /api/posts/
-Returns an array containing all posts with their id, text, user information and an array of ids that have liked
+Returns an array containing all posts with their id, text, user information
 - Get single post /api/posts/id#
-Returns a single post as an object containing id, text, user information and an array of ids that have liked the post
+Returns a single post as an object containing id, text, user information and a total number of likes
 - Post /api/posts/ - Expects json {"text":"big example post", "user_id":1}
 Adds a post to the db
 - Put /api/posts/like/ - expects json {"user_id":1, "post_id":1}
