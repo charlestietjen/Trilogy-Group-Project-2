@@ -1,6 +1,6 @@
 const Post = require('./Post');
 const User = require('./User');
-const Same = require('./Same');
+const Like = require('./Like');
 
 User.hasMany(Post, {
     foreignKey: 'user_id'
@@ -12,36 +12,35 @@ Post.belongsTo(User, {
 });
 
 User.belongsToMany(Post, {
-    through: Same,
-    as: 'samed_posts',
-
+    through: Like,
+    as: 'liked_posts',
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
 });
 
 Post.belongsToMany(User, {
-    through: Same,
-    as: 'samed_posts',
+    through: Like,
+    as: 'liked_posts',
     foreignKey: 'post_id',
     onDelete: 'SET NULL'
 });
 
-Same.belongsTo(User, {
+Like.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
 });
 
-Same.belongsTo(Post, {
+Like.belongsTo(Post, {
     foreignKey: 'post_id',
     onDelete: 'SET NULL'
 });
 
-User.hasMany(Same, {
+User.hasMany(Like, {
+    foreignKey: 'user_id'
+});
+
+Post.hasMany(Like, {
     foreignKey: 'post_id'
 });
 
-Post.hasMany(Same, {
-    foreignKey: 'post_id'
-});
-
-module.exports = { User, Post, Same };
+module.exports = { User, Post, Like };

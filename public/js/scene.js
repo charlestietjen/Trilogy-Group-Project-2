@@ -1,5 +1,6 @@
 import * as THREE from './three.module.js';
 
+const sceneEl = document.querySelector('#scene');
 const globeTex = new THREE.TextureLoader().load('../assets/img/globe/globe.jpg');
 
 let scene, camera, renderer, skyboxGeo, skybox, globeGeo, globe, globeMat;
@@ -16,7 +17,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.domElement.id = "canvas";
-  document.body.appendChild(renderer.domElement);
+  sceneEl.appendChild(renderer.domElement);
   const materialArray = createMaterialArray(skyboxImage);
   skyboxGeo = new THREE.BoxGeometry(10000, 10000, 10000);
   skybox = new THREE.Mesh(skyboxGeo, materialArray);
