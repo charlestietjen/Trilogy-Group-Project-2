@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const userController = require('./userController');
 const postController = require('./postController');
-const likeController = require('./likeController');
 
 router.use('/posts/', postController);
 router.use('/users/', userController);
