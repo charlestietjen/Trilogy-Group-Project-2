@@ -367,7 +367,7 @@ section {
 }
 
 .scroller {
-    width: 60%;
+    width: 80%;
     height: 70vh;
     background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
     border: 2px solid rgba( var(--clr-main), 0.1);
@@ -404,7 +404,7 @@ section {
 .post {
     width: 94%;
     margin:0.5em auto;
-    min-height: 5em;
+    min-height: 15em;
     border-radius: 20px;
     background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
     border: 2px solid rgba( var(--clr-main), 0.1);
@@ -415,6 +415,7 @@ section {
 .banner {
     height: fit-content;
     padding-inline: 3.2em;
+    justify-content: space-around;
 }
 
 .menu {
