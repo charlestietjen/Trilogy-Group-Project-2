@@ -459,6 +459,7 @@ section {
     height: 370%;
     z-index: 7;
     transition: 1s;
+    background-color: rgba( var(--clr-blk), 0.8 );
 
 }
 
