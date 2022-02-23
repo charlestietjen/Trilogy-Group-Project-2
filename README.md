@@ -1,5 +1,47 @@
 # Trilogy-Group-Project-2 - Space your Problems (working title)
 
+## API Reference
+
+### Users
+
+(review whether we even need get requests for user information, probably not?)
+- Get all users /api/users/
+returns an array of objects containing id's and emails (probably shouldn't return emails without auth)
+- Get single user /api/user/id#
+returns a single object containing id and email
+- Post /api/users/
+create a user account, expects json
+{
+  "email":"example@email.com",
+  "password":"goodpassword"
+}
+- Put /api/users/id# (this probably wants to live in dashboard specific routes with authorization later)
+updates user at said id with a new email or password or both, whatever the json in body contains
+- Post /api/users/login
+expects a json {"email":"example@email.com", "password":"goodpassword"} begins a login session, sets session.loggedIn true and returns a success message on success, error on failure
+- Post /api/users/logout
+requires no body, destroys the current session
+- Delete /api/users/id#
+Deletes user at given id
+
+### Posts
+
+('like' metric tracking is err...bad right now. to be fixed)
+- Get all posts /api/posts/
+Returns an array containing all posts with their id, text, user information and an array of ids that have liked
+- Get single post /api/posts/id#
+Returns a single post as an object containing id, text, user information and an array of ids that have liked the post
+- Post /api/posts/ - Expects json {"text":"big example post", "user_id":1}
+Adds a post to the db
+- Put /api/posts/like/ - expects json {"user_id":1, "post_id":1}
+creates an entry in the like database linking a user to a post
+- Put /api/posts/id# - expects json {"text":"updated post example"}
+updates a post at the id
+- Delete /api/posts/id#
+Deletes post at given id
+
+live server available at: https://spaced-problems.herokuapp.com/
+
 Running the server locally requires a .env file with the following information:
 SECRET='a secret'
 DB_USER='root'
