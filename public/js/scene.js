@@ -32,7 +32,7 @@ function init() {
 function animate() {
   renderer.render(scene, camera);
   globe.rotation.y += 0.001;
-  camera.rotation.y -= 0.001;
+  camera.rotation.y -= 0.00001;
   // camera.rotation.z += 0.001;
 //   camera.rotation.x += 0.001;
   requestAnimationFrame(animate);

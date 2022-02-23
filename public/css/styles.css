@@ -382,10 +382,14 @@ section {
 .scroller {
     width: 80%;
     height: 70vh;
-    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
+    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0)),
+    linear-gradient(to bottom right, rgba( var(--clr-2nd), 0.08 ) , rgba( var(--clr-main), 0.01)),
+    linear-gradient(to bottom left, rgba( var(--clr-3rd), 0.08 ) , rgba( var(--clr-main), 0.01));
     border: 2px solid rgba( var(--clr-main), 0.1);
     backdrop-filter: blur(3px);
-    box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4);
+    box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4),
+                inset 10px 10px 20px 7px rgba( var(--clr-2nd), 0.03),
+                inset -10px 10px 20px 7px rgba( var(--clr-3rd), 0.03);
     border-radius: 15px;
     margin: 5vh auto;
     position: absolute;
@@ -404,12 +408,14 @@ section {
     background-image: linear-gradient(to bottom, rgba( var(--clr-blk), 0.5 ) , rgba( var(--clr-blk), 0.2));
     border-radius: 20px;
     background-position: center;
-    box-shadow: inset 0px 10px 30px px rgba( var(--clr-blk), 0.7);
     overflow-y: scroll;
     max-height: 52vh;
     border: 2px inset rgba( var(--clr-main), 0.1);
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.2),
+    6px 10px 7px -5px rgba( var(--clr-2nd), 0.05),
+    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.05);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
