@@ -386,8 +386,8 @@ section {
     border: 2px solid rgba( var(--clr-main), 0.1);
     backdrop-filter: blur(3px);
     box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4),
-                inset 10px 10px 20px 7px rgba( var(--clr-2nd), 0.03),
-                inset -10px 10px 20px 7px rgba( var(--clr-3rd), 0.03);
+                inset 10px 10px 20px 7px rgba( var(--clr-2nd), 0.025),
+                inset -10px 10px 20px 7px rgba( var(--clr-3rd), 0.025);
     border-radius: 15px;
     margin: 5vh auto;
     position: absolute;
@@ -411,9 +411,10 @@ section {
     border: 2px inset rgba( var(--clr-main), 0.1);
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.2),
-    6px 10px 7px -5px rgba( var(--clr-2nd), 0.05),
-    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.05);
+    box-shadow: inset 0px 10px 7px 5px rgba( var(--clr-blk), 0.1),
+    0px -15px 15px -15px rgba( var(--clr-blk), 0.2),
+    6px 10px 7px -5px rgba( var(--clr-2nd), 0.025),
+    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.025);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
