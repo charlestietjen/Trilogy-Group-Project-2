@@ -450,9 +450,11 @@ section {
     width: 94%;
     margin:1em auto;
     min-height: 3em;
-    background: radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) ),
-    linear-gradient(to right, rgba( var(--clr-3rd), 0.17 ) , rgba( var(--clr-2nd), 0.3 ) , rgba( var(--clr-3rd), 0.17 ) );
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    background: radial-gradient( rgba( var(--clr-blk), 0.4), rgba( var(--clr-blk), 0.7) ),
+    linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-main), 0.17 ) );
     border-radius: 3em;
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
 }
 
 .banner {
