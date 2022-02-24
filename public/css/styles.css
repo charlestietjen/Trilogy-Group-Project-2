@@ -382,9 +382,7 @@ section {
 .scroller {
     width: 80%;
     height: 70vh;
-    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0)),
-    linear-gradient(to bottom right, rgba( var(--clr-2nd), 0.08 ) , rgba( var(--clr-main), 0.01)),
-    linear-gradient(to bottom left, rgba( var(--clr-3rd), 0.08 ) , rgba( var(--clr-main), 0.01));
+    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
     border: 2px solid rgba( var(--clr-main), 0.1);
     backdrop-filter: blur(3px);
     box-shadow: 0px 15px 7px -7px rgba( var(--clr-blk), 0.4),
@@ -427,13 +425,33 @@ section {
 
 .post {
     width: 94%;
-    margin:0.5em auto;
+    margin:1em auto;
     min-height: 15em;
     border-radius: 20px;
     background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
     border: 2px solid rgba( var(--clr-main), 0.1);
     backdrop-filter: blur(3px);
+}
 
+.post-content {
+    width: 94%;
+    margin:1em auto;
+    padding: 1em;
+    min-height: 10em;
+    border-radius: 20px;
+    background: 
+    radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) );
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+}
+
+.post-caption {
+    width: 94%;
+    margin:1em auto;
+    min-height: 3em;
+    background: radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) ),
+    linear-gradient(to right, rgba( var(--clr-3rd), 0.17 ) , rgba( var(--clr-2nd), 0.3 ) , rgba( var(--clr-3rd), 0.17 ) );
+    border-radius: 3em;
 }
 
 .banner {
