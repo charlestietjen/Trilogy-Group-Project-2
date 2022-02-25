@@ -62,30 +62,108 @@ body {
 
 
 .login-box{
-    max-width: 500px;
+    width: 90%;
+    max-height: 65vh;
+    min-height: 50vh;
+    /* padding-left: 2em; */
     float: none;
-    margin: 150px auto;
+    margin: 15px auto;
+    background-image: linear-gradient(to bottom, rgba( var(--clr-blk), 0.5 ) , rgba( var(--clr-blk), 0.2));
+    border-radius: 20px;
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    box-shadow: inset 0px 10px 7px 5px rgba( var(--clr-blk), 0.1),
+    0px -15px 15px -15px rgba( var(--clr-blk), 0.2),
+    6px 10px 7px -5px rgba( var(--clr-2nd), 0.025),
+    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.025);
 }
 
 .writeup-box{
-    max-width: 500px;
     float: none;
-    margin: 150px auto;
+    margin: 2em auto;
+    width: 80%;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    min-height: 50vh;
+    background-image: linear-gradient(to bottom, rgba( var(--clr-main), 0.2 ) , rgba( var(--clr-main), 0.0));
+    border: 2px solid rgba( var(--clr-main), 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow: rgb(211, 211, 211, 0.5);
+    border-radius: 15px;
+    margin: 5vh auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
-.description{
-    background: rgb(211, 211, 211, 0.5);
-    padding: 30px;
+/* .half{
+    width: 50%;
 }
 
-.login-left{
+.half .login-box{
+    width: 50%;
+} */
+
+.left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-grow: 1.5; */
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-shrink: 1; */
+}
+
+.about-us{
+    text-align: justify;
+    text-indent: 1em;
+}
+/* .description{
+    width: 40%;
+    background-image: linear-gradient(to bottom, rgba( var(--clr-blk), 0.5 ) , rgba( var(--clr-blk), 0.2));
+    border-radius: 20px;
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    box-shadow: inset 0px 10px 7px 5px rgba( var(--clr-blk), 0.1),
+    0px -15px 15px -15px rgba( var(--clr-blk), 0.2),
+    6px 10px 7px -5px rgba( var(--clr-2nd), 0.025),
+    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.025);
+} */
+.login-form{
+    padding: 1em;
+    flex: content;
+}
+
+.sign-up-form{
+    padding: 1em;
+    flex: content;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+/* .login-left{
     background: rgb(211, 211, 211, 0.5);
-    padding: 30px;
+    padding: 1em;
 }
 
 .login-right{
     background: rgb( var(--clr-char));
-    padding: 30px;
+    padding: 1em;
+} */
+
+.form-group{
+    padding: 0.5em;
 }
 
 .form-control{
