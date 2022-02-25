@@ -6,12 +6,9 @@
     <div class = "flex wrapper-full push-parent">
     <div class = "sidebar"></div>
     <div class = "pushbox">
-        <div class = "post"><p class = "tf-p2 spacer text-white fade"></p></div>
-        <div class = "post"><p class = "tf-p2 spacer text-white fade"></p></div>
-        <div class = "post"><p class = "tf-p2 spacer text-white fade"></p></div>
-        <div class = "post"><p class = "tf-p2 spacer text-white fade"></p></div>
-
-
+        {{#each posts as |post|}}
+        {{> singlepost post }}
+        {{/each}}
     </div>
     <div class = "sidebar"></div>
     </div>

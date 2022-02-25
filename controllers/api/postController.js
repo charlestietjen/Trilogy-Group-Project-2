@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
     if(req.session) {
         Post.create({
             text: req.body.text,
-            user_id: req.session.user_id
+            user_id: req.body.user_id || req.session.user_id
         })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -80,7 +80,7 @@ router.post('/', (req, res) => {
 // like post
 router.put('/like', (req, res) => {
     if (req.session) {
-        Post.like({ ...req.body, user_id: req.session.user_id }, { Like, User })
+        Post.like({ ...req.body, user_id: req.body.user_id || req.session.user_id }, { Like, User })
         .then(updatedLikeData => res.json(updatedLikeData))
         .catch(err => {
             console.log(err);
