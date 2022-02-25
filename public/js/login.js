@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert('Username or password incorrect');
       }
     }
   }
@@ -25,15 +25,13 @@ async function loginFormHandler(event) {
   async function signupFormHandler(event) {
     event.preventDefault();
   
-    const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-  
-    if (username && email && password) {
+
+    if (email && password) {
       const response = await fetch('/api/users', {
         method: 'post',
         body: JSON.stringify({
-          username,
           email,
           password
         }),
@@ -43,7 +41,7 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert('Unable to create account, please check email and password');
       }
     }
   }
