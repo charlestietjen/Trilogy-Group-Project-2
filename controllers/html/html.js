@@ -5,4 +5,5 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/mockup.html'));
 });
 
+
 module.exports = router;

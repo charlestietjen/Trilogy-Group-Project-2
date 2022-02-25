@@ -60,6 +60,38 @@ body {
     position: relative;
 }
 
+
+.login-box{
+    max-width: 500px;
+    float: none;
+    margin: 150px auto;
+}
+
+.writeup-box{
+    max-width: 500px;
+    float: none;
+    margin: 150px auto;
+}
+
+.description{
+    background: rgb(211, 211, 211, 0.5);
+    padding: 30px;
+}
+
+.login-left{
+    background: rgb(211, 211, 211, 0.5);
+    padding: 30px;
+}
+
+.login-right{
+    background: rgb( var(--clr-char));
+    padding: 30px;
+}
+
+.form-control{
+    background-color: transparent !important;
+}
+
 canvas {
     position: fixed;
     top: 0;
