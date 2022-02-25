@@ -5,4 +5,9 @@ router.get('/', (req, res) => {
     res.render('landing')
 });
 
+router.get('/login', (req, res) => {
+    console.log('login route')
+    res.render('login');
+});
+
 module.exports = router;
