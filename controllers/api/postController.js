@@ -1,20 +1,26 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Like } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //get all posts
 router.get('/', (req, res) => {
     Post.findAll({
         // 
-        attributes: ['id', 'text', 
-        ],
+        attributes: ['id', 'text', 'category'],
         include: [{
             model: User,
-            attributes: ['email']
+            attributes: ['id']
         },
-        ]
+        {
+            model: Like,
+            attributes: ['user_id'],
+        }
+        ],
     })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbPostData => {
+        res.json(dbPostData)
+    })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -29,6 +35,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'text',
+            'category',
             'created_at',
         ],
         include: [
@@ -36,6 +43,10 @@ router.get('/:id', (req, res) => {
                 model: User,
                 attributes: ['email']
             },
+            {
+                model: Like,
+                attributes: ['user_id'],
+            }
         ]
     })
     .then(dbPostData => {
@@ -43,20 +54,7 @@ router.get('/:id', (req, res) => {
             res.status(404).json({ message: 'Post not found' });
             return;
         }
-        Like.findAndCountAll({
-            where: {
-                post_id: req.params.id
-            }
-        })
-        .then(dbLikeData =>{
-            dbPostData.dataValues.likeCount = dbLikeData.count
-            console.log(dbPostData)
-            res.json(dbPostData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+        res.json(dbPostData);
     })
     .catch(err => {
         console.log(err);
@@ -68,7 +66,8 @@ router.post('/', (req, res) => {
     if(req.session) {
         Post.create({
             text: req.body.text,
-            user_id: req.body.user_id || req.session.user_id
+            user_id: req.body.user_id || req.session.user_id,
+            category: req.body.category
         })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -80,19 +79,23 @@ router.post('/', (req, res) => {
 // like post
 router.put('/like', (req, res) => {
     if (req.session) {
-        Post.like({ ...req.body, user_id: req.body.user_id || req.session.user_id }, { Like, User })
-        .then(updatedLikeData => res.json(updatedLikeData))
+        Like.create({
+            user_id: req.body.user_id || req.session.user_id,
+            post_id: req.body.post_id
+        })
+        .then(dbLikeData => res.json(dbLikeData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
-        });
+        })
     }
 });
 // edit post, expects {text: "updated example"}
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
-            text: req.body.text
+            text: req.body.text,
+            category: req.body.category
         },
         {
             where: {
