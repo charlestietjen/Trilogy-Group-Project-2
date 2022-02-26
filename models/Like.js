@@ -5,11 +5,6 @@ class Like extends Model{}
 
 Like.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true 
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
