@@ -31,30 +31,34 @@ Acknowledging and expressing your feelings Is important. Spaced out can be your 
             {{!-- <div class="row"> --}}
                 {{!-- <div class="col-md-3 login-left"> --}}
                     <div class="login-card flex center" id="login">
-                    <h2 style="text-white fade tf-h5">Login</h2>
-                    <form class="login-form flex center">
+                    <p class="block login-title center text-white fade tf-h5">Log in</h2>
+                    <form class="login-form flex center" id="login-form">
                         <div class="form-group">
-                            <input placeholder="username" id="email-login" type="text" name="user" class="form-control" required>
+                            <input placeholder="username" spellcheck="false" id="email-login" type="text" name="user" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input placeholder = "password" id="password-login" type="password" name="password" class="form-control" required>
+                            <input placeholder = "password" spellcheck="false" id="password-login" type="password" name="password" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="text-white-glow tf-h1">enter</button>
+                        <a href="#signup" class = "text-white-glow" >make an account</a>
                     </form>
                     </div>
                 {{!-- </div> --}}
-                <div class="login-card" id="signup">
-                 <h2 style="text-white fade tf-h5">Register Here</h2>
-                    <form class="signup-form">
+                <div class="login-card flex center" id="signup">
+                 <p class="block login-title center text-white fade tf-h5">Register</h2>
+                    <form class="login-form flex center" id="signup-form">
                         <div class="form-group">
-                            <label style="text-white fade tf-h6">Email</label>
-                            <input id='email-signup' type="text" name="user" class="form-control" required>
+                            <input placeholder = "email" spellcheck="false" id='email-signup' type="text" name="user" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label style="text-white fade tf-h6">Password</label>
-                            <input <input id="password-signup" type="password" name="password" class="form-control" required>
+                         
+                            <input placeholder="password" spellcheck="false" id="password-signup" type="password" name="password" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <div class="form-group">
+                         
+                            <input placeholder="password confirm" spellcheck="false" id="password-signup2" type="password" name="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="text-white-glow tf-h1">Register</button>
                     </form>
                     </div>
                     {{!-- </div> --}}
