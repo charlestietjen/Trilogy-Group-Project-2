@@ -10,7 +10,7 @@
     --clr-blk: 0, 0, 0 ;
     --clr-wht: 245, 245, 245 ;
 
-    --ff-l: 'Bellefair', serif;
+    --ff-l: 'Barlow Condensed', serif;
     --ff-m: 'Bebas Neue', sans-serif;
     --ff-s: 'Inter', sans-serif;
 
@@ -167,6 +167,10 @@ select {
     margin-bottom: 3em;
 }
 
+.space-evenly {
+    justify-content:space-evenly;
+}
+
 
 /*---------------*/
 /* Colours       */
@@ -303,14 +307,16 @@ section {
 
 .tf-h1 {
     font-family:var(--ff-l);
-    font-size:var(--fs-9);
+    font-size:var(--fs-3);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-2);
 }
 
 .tf-h2 {
     font-family:var(--ff-l);
-    font-size:var(--fs-8);
+    font-size:var(--fs-2);
     letter-spacing: var(--ls-3);
-    width: fit-content;
+    -webkit-font-smoothing: none;
 }
 
 .tf-h3 {
@@ -374,6 +380,20 @@ section {
                  transition: 1s;
 }
 
+.text-3rd-glow {
+    color: rgba( var(--clr-3rd), 0.5);
+    text-shadow: 0px 0px 10px rgba( var(--clr-3rd), 0), 
+                 0px 0px 5px rgba( var(--clr-blk), 0);
+                 transition: 1s;
+}
+
+.text-3rd-glow:hover {
+    color: rgba( var(--clr-3rd), 0.7);
+    text-shadow: 0px 0px 10px rgba( var(--clr-3rd), 0.5), 
+                 10px 10px 5px rgba( var(--clr-blk), 0.1);
+                 transition: 1s;
+}
+
 /*-----------------------------*/
 /* Component... components?    */
 /*-----------------------------*/
@@ -431,6 +451,12 @@ section {
 
 .sidebar {
     width: 20%;
+    margin: 1em 0;
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    background: radial-gradient( rgba( var(--clr-blk), 0.4), rgba( var(--clr-blk), 0.7) ),
+    linear-gradient(to bottom, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-3rd), 0.17 ) );
+    border-radius: 2em;
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
 }
 
 .pushbox {
@@ -487,6 +513,32 @@ section {
     linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-main), 0.17 ) );
     border-radius: 3em;
     box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+}
+
+.text-input {
+    width: 90%;
+    margin:0em auto 1em;
+    padding: 0.5em;
+    min-height: 11em;
+    border-radius: 20px;
+    background: 
+    radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) );
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+    resize: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.text-input::-webkit-scrollbar {
+    display: none;
+  }
+
+.text-input:focus {
+    outline:none;
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    
 }
 
 .banner {
