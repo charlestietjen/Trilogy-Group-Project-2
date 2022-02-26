@@ -177,6 +177,12 @@ body {
     radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) );
     border: 2px inset rgba( var(--clr-main), 0.1);
     box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+    color: rgb( var(--clr-wht));
+}
+
+.form-group input:focus {  
+    outline:none;
+    border: 2px inset rgba( var(--clr-main), 0.1);
 }
 
 .form-control{
