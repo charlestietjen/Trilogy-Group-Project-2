@@ -26,14 +26,13 @@ Deletes user at given id
 
 ### Posts
 
-('like' metric tracking is err...bad right now. to be fixed)
 - Get all posts /api/posts/
-Returns an array containing all posts with their id, text, user information
+Returns an array containing all posts with their id, text, user information, category name and an array of user ids that have liked the post
 - Get single post /api/posts/id#
-Returns a single post as an object containing id, text, user information and a total number of likes
-- Post /api/posts/ - Expects json {"text":"big example post", "user_id":1}
+Returns a single post as an object containing id, text, user information category name and an array of user ids that have liked the post
+- Post /api/posts/ - Expects json {"text":"big example post", "user_id":1, "category":"example category"}
 Adds a post to the db
-- Put /api/posts/like/ - expects json {"user_id":1, "post_id":1}
+- Put /api/posts/like/ - expects json, user_id is provided by session, only post_id is required from a request {"user_id":1,"post_id":1}
 creates an entry in the like database linking a user to a post
 - Put /api/posts/id# - expects json {"text":"updated post example"}
 updates a post at the id
