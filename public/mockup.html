@@ -7,7 +7,7 @@
     <title>spaaaaaaaaaaaaaaaaaaace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Inter:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
@@ -15,24 +15,38 @@
         <h2 class = "blurh2 tf-header1">SPACEDOUT</h2> 
         <div class = "menu flex center">
             <p class = "text-main tf-h5 menu-item">menu</p>
-            <p class = "text-white-glow tf-h5 menu-item">logout</p>
-            <p class = "text-white-glow tf-h5 menu-item">account</p>
-            <p class = "text-white-glow tf-h5 menu-item">support</p>
+            <p class = "text-white-glow tf-h1 menu-item">logout</p>
+            <p class = "text-white-glow tf-h1 menu-item">account</p>
+            <p class = "text-white-glow tf-h1 menu-item">support</p>
         
         </div>
         
     </div>
     <div class = "scroller"> 
         <div class = "flex wrapper-full banner">
-        <p class = "text-white-glow tf-h5">UPDATE</p> <p class = "text-white-glow tf-h5">CREATE</p> <p class = "text-white-glow tf-h5">BROWSE</p>
+            <p class = "text-white-glow tf-h5">NEW POST</p>
+        <p class = "text-white-glow tf-h5">UPDATE</p> 
+        <p class = "text-white-glow tf-h5">COLORS</p> 
+        <p class = "text-white-glow tf-h5">BROWSE</p>
         </div>
 
         <div class = "flex wrapper-full push-parent">
-        <div class = "sidebar"></div>
+        <div class = "sidebar" id="sidebar-left">
+            <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1">New post</p>
+            </div>
+            <form class = "flex wrapper-none">
+            <textarea class="text-input text-white fade" spellcheck="false"></textarea>
+        </form>
+            <div class = "flex space-evenly">
+            <p class = "text-3rd-glow tf-h1">delete</button>
+            <p class = "text-white-glow fade tf-h1">post</button>
+            </div>
+        </div>
         <div class = "pushbox">
             <div class = "post">
                 <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">hello </p>
+                    <p class = "tf-p2 text-white fade">HELLO </p>
                 </div>
                 <div class = "post-caption">
                 </div>  
@@ -73,7 +87,10 @@
 
 
         </div>
-        <div class = "sidebar"></div>
+        <div class = "sidebar" id="right-sidebar">
+            <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1">topics</p>
+            </div>
         </div>
     </div>
     <script type="module" src="/js/scene.js"></script>
