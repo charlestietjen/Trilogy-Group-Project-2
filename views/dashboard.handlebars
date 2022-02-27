@@ -1,0 +1,44 @@
+{{!-- <section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Link</label>
+      <input id="post-url" name="post-url" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section> --}}
+
+<section>
+    <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1 new-post">New post</p>
+            </div>
+            <form class = "flex wrapper-none">
+            <textarea class="text-input text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
+        </form>
+            <div class = "flex space-evenly">
+            <p class = "text-3rd-glow tf-h1 delete-post-btn">delete</button>
+            <p class = "text-white-glow fade tf-h1 btn" type="submit" >post</button>
+            </div> 
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/js/add-post.js"></script>
