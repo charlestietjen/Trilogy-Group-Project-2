@@ -28,6 +28,7 @@ Deletes user at given id
 
 - Get all posts /api/posts/
 Returns an array containing all posts with their id, text, user information, category name and an array of user ids that have liked the post
+- to be added - Get all posts by category
 - Get single post /api/posts/id#
 Returns a single post as an object containing id, text, user information category name and an array of user ids that have liked the post
 - Post /api/posts/ - Expects json {"text":"big example post", "user_id":1, "category":"example category"}
