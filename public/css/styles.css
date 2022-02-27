@@ -396,6 +396,14 @@ section {
     border-color:rgba( var(--clr-3rd), 0.1)
 }
 
+.pushbox,
+.post-content,
+.text-input,
+.post-caption
+{
+    backdrop-filter:blur(12px);
+}
+
 /*------------------------*/
 /* Typeface Components    */
 /*------------------------*/
