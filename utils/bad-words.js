@@ -1,0 +1,16 @@
+module.exports = [
+   'fuck',
+   'f u c k',
+   'cock',
+   'pussy',
+   'shit',
+   'fucking',
+   'whore',
+   'ass',
+   'asshole',
+   'boobs',
+   'motherfucker',
+   'blowjob',
+   'bullshit',
+   'butt',
+];
