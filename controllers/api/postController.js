@@ -94,7 +94,7 @@ router.put('/unlike', (req, res) => {
     if (req.session) {
         Like.destroy({
             where: {
-                user_id: req.session.user_id,
+                user_id: req.body.user_id || req.session.user_id,
                 post_id: req.body.post_id
             }
         })
