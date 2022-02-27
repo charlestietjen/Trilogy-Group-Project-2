@@ -1,44 +1,27 @@
-{{!-- <section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+<div class = "scroller"> 
+    <div class = "flex wrapper-full banner">
+    <p class = "text-white-glow tf-h5">UPDATE</p> <p class = "text-white-glow tf-h5">CREATE</p> <p class = "text-white-glow tf-h5">BROWSE</p>
     </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section> --}}
 
-<section>
-    <div class = "flex center spacer">
-                <p class = "text-white fade tf-h1 new-post">New post</p>
+    <div class = "flex wrapper-full push-parent">
+    <div class = "sidebar" id="sidebar-left">
+            <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1">New post</p>
             </div>
             <form class = "flex wrapper-none">
-            <textarea class="text-input text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
+            <textarea id="post-textarea" class="text-input text-white fade" spellcheck="false"></textarea>
         </form>
             <div class = "flex space-evenly">
-            <p class = "text-3rd-glow tf-h1 delete-post-btn">delete</button>
-            <p class = "text-white-glow fade tf-h1 btn" type="submit" >post</button>
-            </div> 
-</section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-<script src="/js/add-post.js"></script>
+            <p id="delete-btn" class = "text-3rd-glow tf-h1">delete</button>
+            <p id="post-btn" class = "text-white-glow fade tf-h1">post</button>
+            </div>
+        </div>
+    <div class = "pushbox">
+        {{#each posts as |post|}}
+        {{> own-singlepost post }}
+        {{/each}}
+    </div>
+    <div class = "sidebar"></div>
+    </div>
+</div>
+<script src="/js/create-post.js"></script>
