@@ -3,7 +3,7 @@ const sequelize = require('../../config/connection');
 const { User, Post, Like } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/dashboard', withAuth, (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
             user_id: req.session.user_id
@@ -18,7 +18,7 @@ router.get('/dashboard', withAuth, (req, res) => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
       res.render('dashboard', {
         posts,
-        loggedIn: req.session.LoggedIn
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
