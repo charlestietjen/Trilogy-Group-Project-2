@@ -1,0 +1,27 @@
+<div class = "scroller"> 
+    <div class = "flex wrapper-full banner">
+    <p class = "text-white-glow tf-h5">UPDATE</p> <p class = "text-white-glow tf-h5">CREATE</p> <p class = "text-white-glow tf-h5">BROWSE</p>
+    </div>
+
+    <div class = "flex wrapper-full push-parent">
+    <div class = "sidebar" id="sidebar-left">
+            <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1">New post</p>
+            </div>
+            <form class = "flex wrapper-none">
+            <textarea id="post-textarea" class="text-input text-white fade" spellcheck="false"></textarea>
+        </form>
+            <div class = "flex space-evenly">
+            <p id="delete-btn" class = "text-3rd-glow tf-h1">delete</button>
+            <p id="post-btn" class = "text-white-glow fade tf-h1">post</button>
+            </div>
+        </div>
+    <div class = "pushbox">
+        {{#each posts as |post|}}
+        {{> own-singlepost post }}
+        {{/each}}
+    </div>
+    <div class = "sidebar"></div>
+    </div>
+</div>
+<script src="/js/create-post.js"></script>
