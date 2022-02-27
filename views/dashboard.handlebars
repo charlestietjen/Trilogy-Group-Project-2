@@ -4,7 +4,7 @@
     </div>
 
     <div class = "flex wrapper-full push-parent">
-    {{#if loggedIn}}<div class = "sidebar" id="sidebar-left">
+    <div class = "sidebar" id="sidebar-left">
             <div class = "flex center spacer">
                 <p class = "text-white fade tf-h1">New post</p>
             </div>
@@ -16,21 +16,12 @@
             <p id="post-btn" class = "text-white-glow fade tf-h1">post</button>
             </div>
         </div>
-    {{else}}
-    <div class = "sidebar" id="sidebar-left">
-        <div class="flex center spacer">
-            <p class = "text-white fade tf-h1">Sign up or login to post! Steve please make this look good though, maybe a big button or something?</p>
-        </div>
-    </div>
-    {{/if}}
     <div class = "pushbox">
         {{#each posts as |post|}}
-        {{> singlepost post }}
+        {{> own-singlepost post }}
         {{/each}}
     </div>
     <div class = "sidebar"></div>
     </div>
 </div>
-{{#if loggedIn}}
 <script src="/js/create-post.js"></script>
-{{/if}}

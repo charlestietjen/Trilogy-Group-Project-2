@@ -90,6 +90,21 @@ router.put('/like', (req, res) => {
         })
     }
 });
+router.put('/unlike', (req, res) => {
+    if (req.session) {
+        Like.destroy({
+            where: {
+                user_id: req.body.user_id || req.session.user_id,
+                post_id: req.body.post_id
+            }
+        })
+        .then(dbLikeData => res.json(dbLikeData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+    }
+});
 // edit post, expects {text: "updated example"}
 router.put('/:id', withAuth, (req, res) => {
     Post.update(
