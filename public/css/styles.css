@@ -396,6 +396,14 @@ section {
     border-color:rgba( var(--clr-3rd), 0.1)
 }
 
+.pushbox,
+.post-content,
+.text-input,
+.post-caption
+{
+    backdrop-filter:blur(12px);
+}
+
 /*------------------------*/
 /* Typeface Components    */
 /*------------------------*/
@@ -663,6 +671,38 @@ section {
     
 }
 
+.topic-browser {
+    overflow-y: scroll;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 14em;
+}
+
+.topic-browser::-webkit-scrollbar {
+    width: 0.25em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba( var(--clr-2nd), 0.2);
+    border-radius: 1em;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba( var(--clr-main), 0.5);
+    transition: 0.5s;
+    border-radius: 1em;
+  }
+  
+
+.topic {
+    width: 80%;
+    color: rgba( var(--clr-2nd), 0.8 );
+
+}
+
 .banner {
     height: fit-content;
     padding-inline: 3.2em;
@@ -719,4 +759,8 @@ button {
     background-color: rgba( var(--clr-main), 0.2 );
     border: 2px solid rgba( var(--clr-main), 0.1);
     box-shadow: 0px 15px 7px 5px rgba( var(--clr-blk), 0.3);
+}
+
+.double-fade {
+    opacity: 0.5;
 }
