@@ -35,6 +35,7 @@ Returns a single post as an object containing id, text, user information categor
 Adds a post to the db
 - Put /api/posts/like/ - expects json, user_id is provided by session, only post_id is required from a request {"user_id":1,"post_id":1}
 creates an entry in the like database linking a user to a post
+- Put /api/posts/unlike/ - same expectation as like, destroys like entry
 - Put /api/posts/id# - expects json {"text":"updated post example"}
 updates a post at the id
 - Delete /api/posts/id#
