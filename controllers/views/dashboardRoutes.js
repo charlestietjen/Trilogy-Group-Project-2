@@ -5,20 +5,31 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
-        attributes: ['id', 'text', 'user_id', 'created_at'],
-        include: {
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: ['id', 'text', 'user_id', 'created_at'],
+      include: {
         model: User,
         attributes: ['email']
       }
     })
     .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
+      const posts = dbPostData.map(post => {
+        thisPost = post.get({ plain: true });
+        if(thisPost.user_id == req.session.user_id) {
+          thisPost.ownPost = true;
+        } else {
+          thisPost.ownPost = false;
+        }
+
+        return  thisPost;
+      });
+     
       res.render('dashboard', {
         posts,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn || false,
+        loggedIn_id: req.session.user_id
       });
     })
     .catch(err => {

@@ -2,7 +2,7 @@ async function createPostHandler(event){
     event.preventDefault();
 
     const text = document.querySelector('#post-textarea').value.trim();
-    const category = 'placeholder'; 
+    const category = document.querySelector('#post-categories').value.trim(); 
 
     if (!text){
         alert("A post can't be empty!");

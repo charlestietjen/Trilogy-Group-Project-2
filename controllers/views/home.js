@@ -30,7 +30,6 @@ router.get('/', (req, res) => {
 
         return  thisPost;
       });
-      console.log(posts)
      
       res.render('landing', {
         posts,
