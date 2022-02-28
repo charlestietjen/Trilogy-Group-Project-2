@@ -3,6 +3,9 @@
         <p class = "tf-p2 text-white fade">{{text}}</p>
     </div>
     <div  class = "post-caption"> 
+        {{#if ownPost}}
+            <h2>EDIT</h2>
+        {{/if}}
         {{post-icons}} {{post-edit-icons}}
     </div>  
 </div>

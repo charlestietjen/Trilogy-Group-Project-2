@@ -41,7 +41,8 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Unable to create account, please check email and password');
+        console.log(response)
+        alert(response.statusText);
       }
     }
   }
