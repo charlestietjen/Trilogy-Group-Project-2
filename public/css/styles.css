@@ -799,7 +799,7 @@ button {
     width: 80%;
     margin: 0 auto;
     flex-grow:1;
-    height: 33%;
+    height: 31%;
     display:flex;
     justify-content: center;
     align-items: center;
