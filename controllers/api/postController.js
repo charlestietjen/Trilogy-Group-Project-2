@@ -1,14 +1,16 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Like } = require('../../models');
+const { Post, User, Like, Hide } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { slangExists } = require('../../utils/validators');
+const Sequelize = require('sequelize');
 
 //get all posts
 router.get('/', (req, res) => {
    Post.findAll({
       //
-      attributes: ['id', 'text', 'category'],
+      attributes: ['id', 'text', 'category', 'created_at'],
+      order: [['created_at', 'DESC']],
       include: [
          {
             model: User,
@@ -18,9 +20,18 @@ router.get('/', (req, res) => {
             model: Like,
             attributes: ['user_id'],
          },
+         {
+            model: Hide,
+         },
       ],
    })
       .then((dbPostData) => {
+         dbPostData = dbPostData.filter(arr => {
+            if (arr.hides.some(h => h.user_id === req.session.user_id)){
+            return;
+        }
+            return arr;
+        })
          res.json(dbPostData);
       })
       .catch((err) => {
@@ -85,10 +96,24 @@ router.put('/like', (req, res) => {
          post_id: req.body.post_id,
       })
          .then((dbLikeData) => res.json(dbLikeData))
-         .catch((err) => {
+         .catch(err => {
             console.log(err);
             res.status(500).json(err);
          });
+   }
+});
+// hide post
+router.put('/hide', (req, res) => {
+   if (req.session) {
+      Hide.create({
+         user_id: req.body.user_id || req.session.user_id,
+         post_id: req.body.post_id,
+      })
+      .then((dbHideData) => res.json(dbHideData))
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
    }
 });
 // edit post, expects {text: "updated example"}
