@@ -1,7 +1,7 @@
 async function createPostHandler(event){
     event.preventDefault();
 
-    const text = document.querySelector('#post-textarea').value.trim();
+    const text = document.querySelector('#post-info').value.trim();
     const category = document.querySelector('#post-categories').value.trim(); 
 
     if (!text){
@@ -28,7 +28,7 @@ async function createPostHandler(event){
 function deleteButtonHandler(event){
     event.preventDefault();
 
-    let text = document.querySelector('#post-textarea');
+    let text = document.querySelector('#post-info');
     text.value = '';
 }
 

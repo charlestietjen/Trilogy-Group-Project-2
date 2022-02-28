@@ -6,5 +6,6 @@ const viewsRoutes = require('./views/')
 router.use('/api/', apiControllers);
 router.use('/mockup', htmlRoutes);
 router.use('/', viewsRoutes);
+router.use('*', viewsRoutes)
 
 module.exports = router;
