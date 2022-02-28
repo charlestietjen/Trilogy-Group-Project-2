@@ -700,6 +700,8 @@ section {
 .topic {
     width: 80%;
     color: rgba( var(--clr-2nd), 0.8 );
+    text-indent: -1.8em;
+    margin-left: 1.8em;
 
 }
 
@@ -799,7 +801,7 @@ button {
     width: 80%;
     margin: 0 auto;
     flex-grow:1;
-    height: 33%;
+    height: 31%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -811,4 +813,5 @@ button {
     border: none;
     outline: none;
     border-radius: 50%;
+    border: transparent;
 }
