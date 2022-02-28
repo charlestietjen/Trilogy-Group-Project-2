@@ -673,17 +673,29 @@ section {
 
 .topic-browser {
     overflow-y: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
     justify-content: center;
     max-width: 80%;
     margin: 0 auto;
-    height: 13em;
+    height: 14em;
 }
 
 .topic-browser::-webkit-scrollbar {
-    display: none;
+    width: 0.25em;
   }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba( var(--clr-2nd), 0.2);
+    border-radius: 1em;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba( var(--clr-main), 0.5);
+    transition: 0.5s;
+    border-radius: 1em;
+  }
+  
 
 .topic {
     width: 80%;
