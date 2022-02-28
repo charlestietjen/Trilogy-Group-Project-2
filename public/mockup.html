@@ -31,15 +31,39 @@
         <div class = "sidebar" id="sidebar-left">
 
 
-            
-            
-            
-            
+
             <div class = "flex center spacer">
+                <p class = "text-white fade tf-h1">colors</p>
+                </div>
+            <div class = "color-picker">
+                <div class = "colorpicker-left">
+                    <div class="color-parent">
+                    <input type="color" value="rgb(var(--clr-main)" class="color-input">
+                    </div>
+                    <div class="color-parent">
+                        <input type="color" class="color-input">
+                    </div>
+                    <div class="color-parent">
+                        <input type="color" class="color-input">
+                    </div>
+
+                </div>
+                <div class = "colorpicker-right">
+                    
+                </div>
+            </div>
+
+            <div class = "flex space-evenly">
+                <p id="reset-colors-btn" class = "text-3rd-glow tf-h1">reset</button>
+                <p id="save-colors-btn" class = "text-white-glow fade tf-h1">save</button>
+                </div>
+            
+            <!-- this is the you-need-to-log-in widget -->
+            <!-- <div class = "flex center spacer">
                 <p class = "spacer text-white fade tf-h1" style="text-align:center;">sign up or log in to post</p>
                 <button href="/login" class=" spacer text-white-glow tf-h1">Log in</button>
                 <button href="/login#signup" class="spacer text-white-glow tf-h1">sign up</button>
-            </div>
+            </div> -->
 
 
 
@@ -95,6 +119,7 @@
             </div>
         </div>
         <div class = "sidebar" id="right-sidebar">
+            <!--this is the topic browser widget-->
             <div class = "flex center spacer">
                 <p class = "text-white fade tf-h1">topics</p>
                 <div class = "flex center spacer topic-browser">
