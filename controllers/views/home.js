@@ -20,11 +20,21 @@ router.get('/', (req, res) => {
       }
     })
     .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      console.log(posts)
+      const posts = dbPostData.map(post => {
+        thisPost = post.get({ plain: true });
+        if(thisPost.user_id == req.session.user_id) {
+          thisPost.ownPost = true;
+        } else {
+          thisPost.ownPost = false;
+        }
+
+        return  thisPost;
+      });
+     
       res.render('landing', {
         posts,
-        loggedIn: req.session.loggedIn || false
+        loggedIn: req.session.loggedIn || false,
+        loggedIn_id: req.session.user_id
       });
     })
     .catch(err => {
