@@ -1,16 +1,18 @@
 const profanity = require('@2toad/profanity').profanity;
 
 const badWords = require('./bad-words');
-exports.validateEmail = (email) => {
-   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-   return regex.test(email);
-};
 
-exports.validatePassword = (password) => {
-   const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+module.exports = {
+   validateEmail: email => {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+   },
+   validatePassword: password => {
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$/;
+   console.log('validater ran')
    return regex.test(password);
-};
-
-exports.slangExists = (string) => {
-   return profanity.exists(string);
-};
+   },
+   slangExists: string => {
+      return profanity.exists(string);
+   }
+}

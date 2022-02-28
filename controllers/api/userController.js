@@ -50,11 +50,11 @@ router.get('/:id', (req, res) => {
 //account creation expects {email: 'test@test.cool', password: 'goodpassword'}
 router.post('/', (req, res) => {
    //validate email
-   if (validateEmail(req.body.email))
+   if (!validateEmail(req.body.email))
       return res.status(400).json({
-         message: 'Password must contain 6 to 16 letters. One Uppercase, One Number and One special character.',
+         message: 'Please enter a valid email!'
       });
-   if (validatePassword(req.body.password)) return res.status(400).json({ message: 'Please enter a valid email!' });
+   if (!validatePassword(req.body.password)) return res.status(400).json({ message: 'Password must contain 6 to 16 letters. One Uppercase, One Number and One special character.' });
 
    User.create({
       email: req.body.email,
