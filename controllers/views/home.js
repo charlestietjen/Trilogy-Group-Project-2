@@ -20,6 +20,10 @@ router.get('/', (req, res) => {
         attributes: ['email']
       },
       {
+        model: Like,
+        attributes: ['user_id'],
+     },
+      {
         model: Hide,
       }]
     })
@@ -37,10 +41,14 @@ router.get('/', (req, res) => {
         } else {
           thisPost.ownPost = false;
         }
+        if(thisPost.likes.some(l => l.user_id === req.session.user_id)){
+          thisPost.likedPost = true;
+        } else {
+          thisPost.likedPost = false;
+        }
 
         return  thisPost;
       });
-     
       res.render('landing', {
         posts,
         loggedIn: req.session.loggedIn || false,

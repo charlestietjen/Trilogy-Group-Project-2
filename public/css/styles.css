@@ -275,7 +275,9 @@ select {
     justify-content:space-evenly;
 }
 
-
+.cursor-pointer{
+    cursor: pointer;
+}
 
 /*---------------*/
 /* Colours       */
@@ -847,6 +849,13 @@ button {
     url('/assets/img/icons/heart_outline.svg');
     background-size: contain;
     background-position:center;
+}
+
+.like-fill {
+    background-image:
+    url('/assets/img/icons/heart_fill.svg');
+    background-size: contain;
+    background-position: center;
 }
 
 .hide {
