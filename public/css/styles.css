@@ -643,6 +643,9 @@ section {
     linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-main), 0.17 ) );
     border-radius: 3em;
     box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .text-input {
@@ -814,4 +817,63 @@ button {
     outline: none;
     border-radius: 50%;
     border: transparent;
+}
+
+.icon-parent {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-image: radial-gradient( rgba( var(--clr-wht), 0.4), rgba( var(--clr-wht), 0.7) ) ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.like {
+    background-image:
+    url('/assets/img/icons/heart_outline.svg');
+    background-size: contain;
+    background-position:center;
+}
+
+.hide {
+    background-image:
+    url('/assets/img/icons/hide.svg');
+    background-size: contain;
+    background-position:center;
+}
+
+.edit {    
+    background-image:
+    url('/assets/img/icons/message_writing.svg');
+    background-size: contain;
+    background-position:center;
+}
+
+.edit:focus {
+    background-image:
+    url('/assets/img/icons/message_check.svg'); 
+    background-size:contain;
+    background-position:center;
+}
+
+.delete {
+    background-image:
+    url('/assets/img/icons/message_close.svg');
+    background-size: contain;
+    background-position:center;
+}
+
+.icon {
+    height: 1.5em;
+    width: 1.5em;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    height: 1.6em;
+    width: 1.6em;
+    transition: 0.5s;
 }
