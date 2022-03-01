@@ -885,5 +885,7 @@ button {
 
 .topic-input {
     background-image: radial-gradient( rgba( var(--clr-blk), 0.4), rgba( var(--clr-blk), 0.7) ) ;
-    width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    color: rgb( var(--clr-wht));
 }

@@ -18,12 +18,12 @@ let topics = [{id: 1, title:"happiness"},
 ];
 
 function pickCategory (e){
-    if (e.target !== e.currentTarget)
+    if (e.target !== e.currentTarget && e.target.id!== "new-topic")
         var clickedItem = e.target.id;
          console.log(clickedItem)
             if (clickedItem === "make-new") {
                 document.querySelector(".topic-browser").removeEventListener("click", pickCategory);
-                document.querySelector("#make-new").innerHTML = ` <input placeholder="username" spellcheck="false" id="email-login" type="text" name="user" class="form-control topic-input" required>`;
+                document.querySelector("#make-new").innerHTML = ` <input placeholder="new topic" spellcheck="false" id="new-topic" type="text" name="user" class="form-control topic-input" required> <button id="button" type="submit" class="spacer text-white-glow tf-h1">submit</button>`;
     }
             else { 
                 leftsidebarEl.innerHTML = `<div class = "flex center spacer">
