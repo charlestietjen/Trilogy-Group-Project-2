@@ -9,10 +9,10 @@ async function deleteFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/mockup/');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
+  document.querySelector('#delete-btn').addEventListener('click', deleteFormHandler);

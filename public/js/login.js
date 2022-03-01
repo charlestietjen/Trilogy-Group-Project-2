@@ -17,8 +17,9 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Username or password incorrect');
+        throw await response.json()
       }
+      throw { errors: [ response.statusText ] }
     }
   }
   
@@ -41,9 +42,9 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        console.log(response)
-        alert(response.statusText);
+        throw await response.json()
       }
+      throw { errors: [ response.statusText ] }
     }
   }
   

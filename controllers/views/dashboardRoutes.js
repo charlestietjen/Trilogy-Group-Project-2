@@ -26,7 +26,7 @@ router.get('/', withAuth, (req, res) => {
 
         return  thisPost;
       });
-     
+      console.log(posts)
       res.render('dashboard', {
         posts,
         loggedIn: req.session.loggedIn || false,
