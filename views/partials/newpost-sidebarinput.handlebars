@@ -4,7 +4,16 @@
             <form class = "flex wrapper-none">
             <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
         </form>
-            <div class = "flex space-evenly">
-            <p class = "text-3rd-glow tf-h1 delete-post-btn">delete</button>
-            <p class = "text-white-glow fade tf-h1">post</button>
-            </div> 
+        <div class="flex center">
+        <select class="menu text-white fade tf-h1" name="categories" id="post-categories">
+            <option class="text-white fade tf-h1 menu-item" value="anxiety">Anxiety</option>
+            <option class="text-white fade tf-h1 menu-item" value="mood">Mood</option>
+            <option class="text-white fade tf-h1 menu-item" value="personality">Personality</option>
+            <option class="text-white fade tf-h1 menu-item" value="eating">Eating</option>
+            </select>
+        </div>
+        <div class = "flex space-evenly">
+            <button id="delete-btn" class="text-3rd-glow tf-h1 delete-post-btn">delete</button>
+            <button id="post-btn" class="text-white-glow fade tf-h1">post</button>
+        </div> 
+        <script src="/js/create-post.js"></script>

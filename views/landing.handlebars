@@ -4,33 +4,13 @@
     </div>
 
     <div class = "flex wrapper-full push-parent">
-    {{#if loggedIn}}<div class = "sidebar" id="sidebar-left">
-            <div class = "flex center spacer">
-                <p class = "text-white fade tf-h1">New post</p>
-            </div>
-            <form class = "flex wrapper-none">
-            <textarea id="post-textarea" class="text-input text-white fade" spellcheck="false"></textarea>
-            <select name="categories" id="post-categories">
-            <option value="anxiety">Anxiety</option>
-            <option value="mood">Mood</option>
-            <option value="personality">Personality</option>
-            <option value="eating">Eating</option>
-            </select>
-        </form>
-            <div class = "flex space-evenly">
-            <p id="delete-btn" class = "text-3rd-glow tf-h1">delete</button>
-            <p id="post-btn" class = "text-white-glow fade tf-h1">post</button>
-            </div>
-        </div>
-    {{else}}
     <div class = "sidebar" id="sidebar-left">
-            <div class = "flex center spacer">
-                <p class = "spacer text-white fade tf-h1" style="text-align:center;">sign up or log in to post</p>
-                <button href="/login" class=" spacer text-white-glow tf-h1">Log in</button>
-                <button href="/login#signup" class="spacer text-white-glow tf-h1">sign up</button>
-            </div>
-    </div>
+    {{#if loggedIn}}
+        {{>newpost-sidebarinput}}
+    {{else}}
+        {{>login-or-signup}}
     {{/if}}
+    </div>
     <div class = "pushbox">
         {{#each posts as |post|}}
         {{> singlepost post }}
@@ -39,6 +19,3 @@
     <div class = "sidebar"></div>
     </div>
 </div>
-{{#if loggedIn}}
-<script src="/js/create-post.js"></script>
-{{/if}}

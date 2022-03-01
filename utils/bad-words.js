@@ -6,11 +6,8 @@ module.exports = [
    'shit',
    'fucking',
    'whore',
-   'ass',
    'asshole',
-   'boobs',
    'motherfucker',
    'blowjob',
    'bullshit',
-   'butt',
 ];
