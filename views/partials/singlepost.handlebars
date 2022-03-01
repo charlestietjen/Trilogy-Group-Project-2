@@ -2,7 +2,15 @@
     <div class = "post-content">
         <p class = "tf-p2 text-white fade">{{text}}</p>
     </div>
-    <div class = "post-caption"> 
+    <div class = "post-caption">
+    {{#if loggedIn}}
+        {{#if ownPost}} 
+        <button class="edit-btn button">Edit</button>
+        <button class="button delete-btn">Delete</button>
+        {{else}}
+        <button class="hide-btn button">Hide Post</button>
+        {{/if}}
         {{post-icons}}
+    {{/if}}
     </div>  
 </div>
