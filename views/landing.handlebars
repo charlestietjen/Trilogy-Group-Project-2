@@ -1,15 +1,15 @@
 <div class = "scroller"> 
     <div class = "flex wrapper-full banner">
-    <p class = "text-white-glow tf-h5">UPDATE</p> <p class = "text-white-glow tf-h5">CREATE</p> <p class = "text-white-glow tf-h5">BROWSE</p>
+        <p class = "text-white-glow tf-h5">UPDATE</p> <p class = "text-white-glow tf-h5">CREATE</p> <p class = "text-white-glow tf-h5">BROWSE</p>
     </div>
 
     <div class = "flex wrapper-full push-parent">
     <div class = "sidebar" id="sidebar-left">
-    {{#if loggedIn}}
+        {{#if loggedIn}}
         {{>newpost-sidebarinput}}
-    {{else}}
+        {{else}}
         {{>login-or-signup}}
-    {{/if}}
+        {{/if}}
     </div>
     <div class = "pushbox">
         {{#each posts as |post|}}

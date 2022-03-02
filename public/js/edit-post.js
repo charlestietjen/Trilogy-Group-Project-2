@@ -1,25 +1,9 @@
-async function editFormHandler(event) {
-    event.preventDefault();
+async function editButtonHandler(event) {
+  event.preventDefault();
+  const id = this.parentElement.parentElement.parentElement.getAttribute('data-id');
+
+}
   
-    const title = document.querySelector('input[name="post-caption"]').value.trim();
-    const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
-    const response = await fetch(`/api/posts/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-        title
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-  
-    if (response.ok) {
-      document.location.replace('/mockup/');
-    } else {
-      alert(response.statusText);
-    }
-  }
-  
-  document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+const editButtons = document.querySelectorAll('.edit-btn')
+editButtons.forEach(btn => {
+  btn.addEventListener('click', editButtonHandler)});

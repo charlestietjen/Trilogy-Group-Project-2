@@ -34,11 +34,11 @@
                 <p class = "text-white fade tf-h1 new-post">New post</p>
             </div>
             <form class = "flex wrapper-none">
-            <textarea class="text-input text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
+            <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
         </form>
             <div class = "flex space-evenly">
             <p class = "text-3rd-glow tf-h1 delete-post-btn">delete</button>
-            <p class = "text-white-glow fade tf-h1">post</button>
+            <p class = "text-white-glow fade tf-h1" id = "newpost-btn">post</button>
             </div> 
             
         </div>
@@ -48,6 +48,27 @@
                     <p class = "tf-p2 text-white fade">HELLO </p>
                 </div>
                 <div class = "post-caption">
+                    <div class = "icon-parent">
+                        <div class = "hide icon" id = "this-hide"></div>
+                    </div>
+
+                    <div class = "icon-parent">
+                        <div class= "like icon" id = "this-like"></div>
+                    </div>
+
+                    <div class = "icon-parent">
+                        <div class = "edit icon" id = "this-edit"></div>
+                    </div>
+
+                    <div class = "icon-parent">
+                        <div class = "delete icon" id = "this-delete"></div>
+                    
+                    </div>
+
+
+
+
+
                 </div>  
             </div>
             <div class = "post">
@@ -98,5 +119,7 @@
         </div>
     </div>
     <script type="module" src="/js/scene.js"></script>
+    <script src="/js/icon-appearance-changes.js"></script>
+    <script src="/js/newpost-frontend.js"></script>
 </body>
 </html>
