@@ -64,7 +64,26 @@ Acknowledging and expressing your feelings Is important. Spaced out can be your 
                             <div class="validation">*</div>
                         </div>
                         <button type="submit" class="text-white-glow tf-h1">Register</button>
+                        <button id="myBtn">Password requirements</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Password requirements </p>
+    <p>Must include...</p>
+    <p>1. ... between 6 - 16 characters</p>
+    <p>2. ... at least 1 uppercase letter</p>
+    <p>3. ... at least 1 lower case letter</p>
+    <p>4. ... a special character</p>
+  </div>
+
                     </form>
+                    <!-- Trigger/Open The Modal -->
+
+</div>
                     </div>
                     {{!-- </div> --}}
 {{!-- </div> --}}
@@ -77,3 +96,4 @@ Re-enter Password:<input type="password" name="password2"/><br/>   --}}
        </div>
 
 <script src="/js/login.js"></script>
+<script src="/js/modal.js"></script>
