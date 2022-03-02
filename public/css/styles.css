@@ -910,6 +910,13 @@ button {
     background-position:center;
 }
 
+.edit-focus {
+    background-image:
+    url('/assets/img/icons/message_check.svg'); 
+    background-size: contain;
+    background-position:center;
+}
+
 .edit:focus {
     background-image:
     url('/assets/img/icons/message_check.svg'); 
