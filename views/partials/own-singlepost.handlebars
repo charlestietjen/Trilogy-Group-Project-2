@@ -3,7 +3,17 @@
         <p class = "tf-p2 text-white fade">{{text}}</p>
     </div>
     <div  class = "post-caption"> 
-        <button class="button">edit</button><button class="button">delete</button>
-        {{post-icons}} {{post-edit-icons}}
+        {{#if ownPost}}
+        <div class="icon-parent">
+            <div class="icon edit edit-btn"></div>
+        </div>
+        {{/if}}
+    
+    
+        {{#if ownPost}}
+        <div class="icon-parent">
+            <div class="icon delete delete-btn"></div>
+        </div>
+        {{/if}}
     </div>  
 </div>
