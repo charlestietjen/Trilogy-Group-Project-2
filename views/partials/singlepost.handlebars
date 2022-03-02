@@ -3,7 +3,7 @@
         <p class = "tf-p2 text-white fade">{{text}}</p>
     </div>
     <div class = "post-caption">
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
     
     {{#if ownPost}}
     <div class="icon-parent">
@@ -12,30 +12,30 @@
     {{/if}}
     
     
-        {{#if ownPost}}
-        <div class="icon-parent">
+    {{#if ownPost}}
+    <div class="icon-parent">
         <div class="icon delete delete-btn"></div>
     </div>
-        {{/if}}
+    {{/if}}
     
     
-        {{#unless ownPost}}
-        <div class="icon-parent">
+    {{#unless ownPost}}
+    <div class="icon-parent">
         {{#if likedPost}}
         <div class="icon like-fill like-btn"></div>
         {{else}}
         <div class="icon like like-btn"></div>
         {{/if}}
     </div>
-        {{/unless}}
+    {{/unless}}
     
     
-        {{#unless ownPost}}
+    {{#unless ownPost}}
     <div class="icon-parent">
         <div class="icon hide hide-btn"></div>
     </div>
-        {{/unless}}
+    {{/unless}}
     
-    {{!-- {{/if}} --}}
+    {{/if}}
     </div> 
 </div>
