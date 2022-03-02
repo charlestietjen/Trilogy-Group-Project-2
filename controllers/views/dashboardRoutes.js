@@ -28,7 +28,7 @@ router.get('/', withAuth, (req, res) => {
       });
       res.render('dashboard', {
         posts,
-        loggedIn: req.session.loggedIn || false,
+        loggedIn: req.session.loggedIn,
         loggedIn_id: req.session.user_id
       });
     })

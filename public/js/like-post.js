@@ -42,5 +42,4 @@ async function likeButtonHandler(event){
 const likeButtons = document.querySelectorAll('.like-btn');
 likeButtons.forEach(btn => {
     btn.addEventListener('click', likeButtonHandler);
-    console.log(btn.classList.contains('like'))
 });

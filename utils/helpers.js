@@ -11,5 +11,5 @@ module.exports = {
     },
     format_time: time => {
         return `${new Date(time).getHours()}:${new Date(time).getMinutes()}`;
-    }
+    },
 };

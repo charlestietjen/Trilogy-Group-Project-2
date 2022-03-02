@@ -51,7 +51,7 @@ router.get('/', (req, res) => {
       });
       res.render('landing', {
         posts,
-        loggedIn: req.session.loggedIn || false,
+        loggedIn: req.session.loggedIn,
         loggedIn_id: req.session.user_id
       });
     })
