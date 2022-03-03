@@ -2,6 +2,7 @@ async function hideButtonHandler(event){
     event.preventDefault();
     const post_id = this.parentElement.parentElement.parentElement.getAttribute('data-id');
     const hideConf = confirm('Are you sure you want to hide this post?')
+    this.removeEventListener('click', hideButtonHandler);
     if (!hideConf){
         return;
     }
@@ -20,6 +21,7 @@ async function hideButtonHandler(event){
         return;
     }
     alert('Failed to hide post')
+    this.addEventListener('click', hideButtonHandler);
 }
 
 const hideButtons = document.querySelectorAll('.hide-btn')
