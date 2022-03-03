@@ -8,6 +8,7 @@ class User extends Model {
     }
 }
 
+// User Modal
 User.init(
     {
         id: {

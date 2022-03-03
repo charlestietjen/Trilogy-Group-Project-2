@@ -1,117 +1,102 @@
-{{!-- <div class="cpl-md-3 login-right"> --}}
+<div class="writeup-box">
 
-    {{!-- <div class="container-2"> --}}
-        <div class="writeup-box">
+    <div class="left flex-nogap wrapper">
+        {{!-- About Us title --}}
+        <p class="bluraboutus tf-h3">About Us</h1>
+        <div class="about-us text-white fade tf-h2">
+            {{!-- About us description --}}
+            <div>
+                <p class="tf-h1 spacer"
+                    style="font-weight: 900; color: rgba( var(--clr-3rd), 0.8); text-align: left; letter-spacing:8px;">
+                    "You don't have to struggle in silence"</p>
+                <p style="font-weight: 600;" class="fade spacer">Spaced out is a safe space to openly talk
+                    about your feelings anonymously without being judged or identified.</p>
+                <p class="spacer">Mental health is important at every stage of life, from childhood and
+                    adolescence through adulthood. Talking about your feelings isn't a sign of weakness,
+                    it's a part of taking charge of your wellbeing and doing what you can to stay healthy.
+                </p>
+                <p class="spacer">This app allows you to share your feelings and thoughts, with the aim of
+                    connecting to Other people anonymously , that in turn can relate or empathize and share
+                    their feelings with you - so you know you are not alone.
+                    Acknowledging and expressing your feelings Is important. Spaced out can be your safe
+                    place to journal and off load your thoughts.</p>
+                </p>
+                <p class="spacer">Make talking about your feelings something you do for you.</p>
+                <p>Sign up for FREE today</p>
+            </div>
+        </div>
+    </div>
 
-            <div class="left flex-nogap wrapper">
-                {{!-- <div class="col-md-6 description"> --}}
-                    <p class="bluraboutus tf-h3">About Us</h1>
-                    <div class="about-us text-white fade tf-h2">
-
-                        <div>
-                            <p class="tf-h1 spacer"
-                                style="font-weight: 900; color: rgba( var(--clr-3rd), 0.8); text-align: left; letter-spacing:8px;">
-                                "You don't have to struggle in silence"</p>
-                            <p style="font-weight: 600;" class="fade spacer">Spaced out is a safe space to openly talk
-                                about your feelings anonymously without being judged or identified.</p>
-                            <p class="spacer">Mental health is important at every stage of life, from childhood and
-                                adolescence through adulthood. Talking about your feelings isn't a sign of weakness,
-                                it's a part of taking charge of your wellbeing and doing what you can to stay healthy.
-                            </p>
-                            <p class="spacer">This app allows you to share your feelings and thoughts, with the aim of
-                                connecting to Other people anonymously , that in turn can relate or empathize and share
-                                their feelings with you - so you know you are not alone.
-                                Acknowledging and expressing your feelings Is important. Spaced out can be your safe
-                                place to journal and off load your thoughts.</p>
-                            </p>
-                            <p class="spacer">Make talking about your feelings something you do for you.</p>
-                            <p>Sign up for FREE today</p>
-                        </div>
+    <div class="right">
+        {{!-- Login in form --}}
+        <div class="half login-box flex">
+            <div class="login-card flex center" id="login">
+                <p class="block login-title center text-white fade tf-h5">Log in</h2>
+                <form class="login-form flex center" id="login-form">
+                    <div class="form-group">
+                        {{!-- Sign in Email --}}
+                        <input placeholder="email" spellcheck="false" id="email-login" type="text" name="user"
+                            class="form-control" required>
+                        <div class="validation">*</div>
                     </div>
-                    {{!--
-                </div> --}}
+                    <div class="form-group">
+                        {{!-- Sign in Password --}}
+                        <input placeholder="password" spellcheck="false" id="password-login" type="password"
+                            name="password" class="form-control" required>
+                        <div class="validation">*</div>
+                    </div>
+                    <button id="button" type="submit" class="text-white-glow tf-h1 cursor-pointer">enter</button>
+                    <a href="#signup" class="text-white-glow">make an account</a>
+                </form>
             </div>
-
-            <div class="right">
-                <div class="half login-box flex">
-
-                    {{!-- <div class="row"> --}}
-                        {{!-- <div class="col-md-3 login-left"> --}}
-                            <div class="login-card flex center" id="login">
-                                <p class="block login-title center text-white fade tf-h5">Log in</h2>
-                                <form class="login-form flex center" id="login-form">
-                                    <div class="form-group">
-                                        <input placeholder="email" spellcheck="false" id="email-login" type="text"
-                                            name="user" class="form-control" required>
-                                        <div class="validation">*</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input placeholder="password" spellcheck="false" id="password-login"
-                                            type="password" name="password" class="form-control" required>
-                                        <div class="validation">*</div>
-                                    </div>
-                                    <button id="button" type="submit" class="text-white-glow tf-h1 cursor-pointer">enter</button>
-                                    <a href="#signup" class="text-white-glow">make an account</a>
-                                </form>
-                            </div>
-                            {{!--
-                        </div> --}}
-                        <div class="login-card flex center" id="signup">
-                            <p class="block login-title center text-white fade tf-h5">Register</h2>
-                            <form class="login-form flex center" id="signup-form" name="f1" action="register.jsp"
-                                onsubmit="return matchpass()">
-                                <div class="form-group">
-                                    <input placeholder="email" spellcheck="false" id='email-signup' type="text"
-                                        name="user" class="form-control" required>
-                                    <div class="validation">*</div>
-                                </div>
-                                <div class="form-group">
-
-                                    <input placeholder="password" spellcheck="false" id="password-signup"
-                                        type="password" name="password" class="form-control" required>
-                                    <div class="validation">*</div>
-                                </div>
-                                <div class="form-group">
-
-                                    <input placeholder="password confirm" spellcheck="false"
-                                        id="confirm-passsword-signup" type="password" name="password2"
-                                        class="form-control" required>
-                                    <div class="validation">*</div>
-                                </div>
-                                <button type="submit" class="text-white-glow tf-h1 cursor-pointer">Register</button>
-                                <button type="button" class="cursor-pointer" id="myBtn">Password requirements</button>
-                            </form>
-
-                        </div>
-
-                        {{!--
-                    </div> --}}
-                    {{!-- </div> --}}
-                {{!-- <form name="f1" action="register.jsp" onsubmit="return matchpass()">
-                    Password:<input type="password" name="password" /><br />
-                    Re-enter Password:<input type="password" name="password2" /><br /> --}}
-
+            {{!-- Sign up/Register> --}}
+            <div class="login-card flex center" id="signup">
+                <p class="block login-title center text-white fade tf-h5">Register</h2>
+                <form class="login-form flex center" id="signup-form" name="f1" action="register.jsp"
+                    onsubmit="return matchpass()">
+                    <div class="form-group">
+                        {{!-- Enter Email --}}
+                        <input placeholder="email" spellcheck="false" id='email-signup' type="text" name="user"
+                            class="form-control" required>
+                        <div class="validation">*</div>
+                    </div>
+                    <div class="form-group">
+                        {{!-- Enter Password --}}
+                        <input placeholder="password" spellcheck="false" id="password-signup" type="password"
+                            name="password" class="form-control" required>
+                        <div class="validation">*</div>
+                    </div>
+                    <div class="form-group">
+                        {{!-- Confirm Password --}}
+                        <input placeholder="password confirm" spellcheck="false" id="confirm-passsword-signup"
+                            type="password" name="password2" class="form-control" required>
+                        <div class="validation">*</div>
+                    </div>
+                    <button type="submit" class="text-white-glow tf-h1 cursor-pointer">Register</button>
+                    <button type="button" class="cursor-pointer" id="myBtn">Password requirements</button>
+                </form>
 
             </div>
         </div>
+    </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p class="spacer">Password requirements </p>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="spacer">Password requirements </p>
 
-                <p>1. Must include between 6 - 16 characters</p>
-                <p>2. Must include at least 1 uppercase letter</p>
-                <p>3. Must include at least 1 lower case letter</p>
-                <p>4. Must include a special character</p>
-            </div>
-
-            <!-- Trigger/Open The Modal -->
-
+            <p>1. Must include between 6 - 16 characters</p>
+            <p>2. Must include at least 1 uppercase letter</p>
+            <p>3. Must include at least 1 lower case letter</p>
+            <p>4. Must include a special character</p>
         </div>
 
-        <script src="/js/login.js"></script>
-        <script src="/js/modal.js"></script>
+        <!-- Trigger/Open The Modal -->
+
+    </div>
+
+    <script src="/js/login.js"></script>
+    <script src="/js/modal.js"></script>

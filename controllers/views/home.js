@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Post, Like, Hide } = require('../../models/');
 
+// Login 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');

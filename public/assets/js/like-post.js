@@ -1,3 +1,4 @@
+// Like Button function
 async function likeButtonHandler(event){
     event.preventDefault();
     console.log(this.parentElement.parentElement.parentElement.getAttribute('data-id'))

@@ -1,24 +1,26 @@
+{{!-- Post --}}
 <div data-id="{{id}}" class = "post">
     <div class = "post-content">
         <p class = "tf-p2 text-white fade">{{text}}</p>
     </div>
     <div class = "post-caption">
     {{#if ownPost}}
+    {{!-- Edit Post btn --}}
     <div class="icon-parent">
         <div class="icon edit edit-btn"></div>
         <div class="icon edit-focus edit-focus-btn"></div>
     </div>
     {{/if}}
-    
-    
+     
     {{#if ownPost}}
+    {{!-- Delete Post btn --}}
     <div class="icon-parent">
         <div class="icon delete delete-btn"></div>
     </div>
     {{/if}}
     
-    
     {{#unless ownPost}}
+    {{!-- Like Post btn --}}
     <div class="icon-parent">
         {{#if likedPost}}
         <div class="icon like-fill like-btn"></div>
@@ -28,8 +30,8 @@
     </div>
     {{/unless}}
     
-    
     {{#unless ownPost}}
+    {{!-- Hide Post btn --}}
     <div class="icon-parent">
         <div class="icon hide hide-btn"></div>
     </div>

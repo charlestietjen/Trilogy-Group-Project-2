@@ -1,3 +1,4 @@
+// Begin to Edit your post
 const editButtonHandler = function(event) {
   event.preventDefault();
   const post = this.parentElement.parentElement.parentElement;
@@ -12,6 +13,7 @@ const editButtonHandler = function(event) {
   hide(this.parentElement.parentElement.querySelector('.edit-focus-btn'));
 }
 
+// Confrm/save your edited post
 async function editConfirmHandler(event){
   event.preventDefault();
   const post = this.parentElement.parentElement.parentElement;
@@ -37,6 +39,7 @@ async function editConfirmHandler(event){
   }
 };
 
+// Hide Posts funtion
 const hide = function(element){
   if (element.style.display === 'none'){
     element.style.display = '';
@@ -48,9 +51,11 @@ const hide = function(element){
 let tempPostContent = '';
 const editButtons = document.querySelectorAll('.edit-btn')
 const editFocusButtons = document.querySelectorAll('.edit-focus-btn')
+
 editButtons.forEach(btn => {
   btn.addEventListener('click', editButtonHandler)
 });
+
 editFocusButtons.forEach(btn => {
   btn.addEventListener('click', editConfirmHandler)
   hide(btn);

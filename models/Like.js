@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Like extends Model{}
 
+// Like Modal
 Like.init(
     {
         user_id: {

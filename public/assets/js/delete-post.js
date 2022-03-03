@@ -1,3 +1,4 @@
+// Delete post function
 async function deleteButtonHandler(event) {
   event.preventDefault();
   const id = this.parentElement.parentElement.parentElement.getAttribute('data-id');

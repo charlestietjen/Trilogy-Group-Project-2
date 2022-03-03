@@ -5,10 +5,10 @@ const withAuth = require('../../utils/auth');
 const { slangExists } = require('../../utils/validators');
 const Sequelize = require('sequelize');
 
-//get all posts
+//Get all posts
 router.get('/', (req, res) => {
    Post.findAll({
-      //
+      
       attributes: ['id', 'text', 'category', 'created_at'],
       order: [['created_at', 'DESC']],
       include: [
@@ -39,7 +39,8 @@ router.get('/', (req, res) => {
          res.status(500).json(err);
       });
 });
-// get post by id
+
+// Get post by id
 router.get('/:id', (req, res) => {
    Post.findOne({
       where: {
@@ -69,7 +70,8 @@ router.get('/:id', (req, res) => {
          res.status(500).json(err);
       });
 });
-// create post, expects {text: "example post", user_id: 1}
+
+// Create post, expects {text: "example post", user_id: 1}
 router.post('/', (req, res) => {
    if (req.session) {
       if (slangExists(req.body.text)) {
@@ -88,7 +90,8 @@ router.post('/', (req, res) => {
       }
    }
 });
-// like post
+
+// Like post
 router.put('/like', (req, res) => {
    if (req.session) {
       Like.create({
@@ -102,7 +105,8 @@ router.put('/like', (req, res) => {
          });
    }
 });
-// unlike
+
+// Unlike
 router.put('/unlike', (req, res) => {
    if (req.session) {
       Like.destroy({
@@ -118,7 +122,8 @@ router.put('/unlike', (req, res) => {
       });
    }
 });
-// hide post
+
+// Hide post
 router.put('/hide', (req, res) => {
    if (req.session) {
       Hide.create({
@@ -132,7 +137,8 @@ router.put('/hide', (req, res) => {
       });
    }
 });
-// edit post, expects {text: "updated example"}
+
+// Edit post, expects {text: "updated example"}
 router.put('/:id', withAuth, (req, res) => {
    if (slangExists(req.body.text)) {
       return res.status(400).json({ status: 'Please remove the slang or bad words from your post' });
@@ -162,6 +168,7 @@ router.put('/:id', withAuth, (req, res) => {
    }
 });
 
+// Delete Posts
 router.delete('/:id', (req, res) => {
    console.log('id', req.params.id);
    Post.destroy({

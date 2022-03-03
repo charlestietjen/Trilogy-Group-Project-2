@@ -6,6 +6,7 @@ var deleteEl = document.querySelector(".edit")
 let likedThis = false
 let editingThis = false
 
+// Post liked and Unliked
 function likeClicked () {
     if ( likedThis === false ){
         console.log("you liked this");
@@ -19,6 +20,7 @@ function likeClicked () {
     }
 }
 
+// Edited post and complete edit function
 function editClicked () {
     if ( editingThis === false ){
         console.log("youre editing this");

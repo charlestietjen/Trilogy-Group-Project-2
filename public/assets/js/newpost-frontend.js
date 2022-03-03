@@ -2,6 +2,7 @@ var postBtnEl = document.querySelector("#newpost-btn");
 var textEl = document.querySelector(".text-input");
 var leftsidebarEl = document.querySelector("#sidebar-left")
 
+// New post topic categories
 let topics = [{id: 1, title:"happiness"},
 
     {id: 2, title: "sadness"},
@@ -17,6 +18,7 @@ let topics = [{id: 1, title:"happiness"},
     {id: 7, title: "bilbo"}
 ];
 
+// Select from a list of categories to post to or create your own category
 function pickCategory (e){
     if (e.target !== e.currentTarget && e.target.id!== "new-topic")
         var clickedItem = e.target.id;
@@ -40,6 +42,7 @@ function pickCategory (e){
         }
 };
 
+// Submitted Post
 function postSubmitted () {
     if(textEl.value == '')
 {
@@ -78,8 +81,4 @@ leftsidebarEl.innerHTML = topicSelector;
 document.querySelector(".topic-browser").addEventListener("click", pickCategory);
 
 }
-
-
-
-
 postBtnEl.addEventListener("click", postSubmitted);

@@ -402,7 +402,7 @@ section {
 
 .pushbox {
     width: 50%;
-    background-image: url('assets/space1.png');
+    background-image: url("assets/img/space1.png");
     border-radius: 20px;
     background-position: center;
     box-shadow: inset 0px 10px 30px px rgba( var(--clr-blk), 0.7);

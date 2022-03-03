@@ -1,3 +1,4 @@
+// Hide Post button function
 async function hideButtonHandler(event){
     event.preventDefault();
     const post_id = this.parentElement.parentElement.parentElement.getAttribute('data-id');

@@ -1,3 +1,4 @@
+// Create Post
 async function createPostHandler(event){
     event.preventDefault();
 
@@ -16,6 +17,7 @@ async function createPostHandler(event){
     topicListEl.style.display = '';
 }
 
+// Delete Post option
 function deleteButtonHandler(event){
     event.preventDefault();
 
@@ -23,6 +25,7 @@ function deleteButtonHandler(event){
     text.value = '';
 }
 
+// Select topic Category
 async function topicBtnHandler(event){
     event.preventDefault();
     const textField = document.querySelector('#post-info');

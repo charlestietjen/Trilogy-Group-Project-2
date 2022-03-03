@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post, Like, Hide } = require('../../models/');
 const { validateEmail, validatePassword } = require('../../utils/validators');
 
-//get users
+//Get users
 router.get('/', (req, res) => {
    User.findAll({
       attributes: { exclude: ['password'] },
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
       });
 });
 
-// get a single user
+// Get a single user
 router.get('/:id', (req, res) => {
    User.findOne({
       attributes: { exclude: ['password'] },
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
       });
 });
 
-//account creation expects {email: 'test@test.cool', password: 'goodpassword'}
+//Account creation expects {email: 'test@test.cool', password: 'goodpassword'}
 router.post('/', (req, res) => {
    //validate email
    if (!validateEmail(req.body.email)){
@@ -77,7 +77,7 @@ router.post('/', (req, res) => {
       });
 });
 
-//login route expects {email: 'test@test.cool', password: 'goodpassword'}
+//Login route expects {email: 'test@test.cool', password: 'goodpassword'}
 router.post('/login', (req, res) => {
    User.findOne({
       where: {
@@ -102,7 +102,7 @@ router.post('/login', (req, res) => {
    });
 });
 
-//logout route
+//Logout route
 router.post('/logout', (req, res) => {
    if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -113,7 +113,7 @@ router.post('/logout', (req, res) => {
    }
 });
 
-//user update - only update data received
+//User update - only update data received
 router.put('/:id', (req, res) => {
    User.update(req.body, {
       individualHooks: true,
@@ -134,7 +134,7 @@ router.put('/:id', (req, res) => {
       });
 });
 
-//delete user route
+//Delete user route
 router.delete('/:id', (req, res) => {
    User.destroy({
       where: {

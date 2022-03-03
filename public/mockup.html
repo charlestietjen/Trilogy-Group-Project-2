@@ -1,125 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spaaaaaaaaaaaaaaaaaaace</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Inter:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Inter:wght@500&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+        <!-- Style sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
-    <div class = "blurfilter flex wrapper-none">
-        <h2 class = "blurh2 tf-header1">SPACEDOUT</h2>
-        <div class = "menu flex center">
-            <p class = "text-main tf-h5 menu-item">menu</p>
-            <p class = "text-white-glow tf-h1 menu-item">logout</p>
-            <p class = "text-white-glow tf-h1 menu-item">account</p>
-            <p class = "text-white-glow tf-h1 menu-item">support</p>
+    <div class="blurfilter flex wrapper-none">
+        <!-- Header -->
+        <h2 class="blurh2 tf-header1">SPACEDOUT</h2>
+        <div class="menu flex center">
+            <!-- Drop down menu -->
+            <p class="text-main tf-h5 menu-item">menu</p>
+            <p class="text-white-glow tf-h1 menu-item">logout</p>
+            <p class="text-white-glow tf-h1 menu-item">account</p>
+            <p class="text-white-glow tf-h1 menu-item">support</p>
         </div>
     </div>
-    <div class = "scroller">
-        <div class = "flex wrapper-full banner">
-            <p class = "text-white-glow tf-h5">NEW POST</p>
-        <p class = "text-white-glow tf-h5">UPDATE</p>
-        <p class = "text-white-glow tf-h5">COLORS</p>
-        <p class = "text-white-glow tf-h5">BROWSE</p>
+    <!-- Main dashbroad display  -->
+    <div class="scroller">
+        <div class="flex wrapper-full banner">
+            <p class="text-white-glow tf-h5">NEW POST</p>
+            <p class="text-white-glow tf-h5">UPDATE</p>
+            <p class="text-white-glow tf-h5">COLORS</p>
+            <p class="text-white-glow tf-h5">BROWSE</p>
         </div>
-        <div class = "flex wrapper-full push-parent">
-        <div class = "sidebar" id="sidebar-left">
+        <div class="flex wrapper-full push-parent">
+            <div class="sidebar" id="sidebar-left">
 
-            <div class = "flex center spacer">
-                <p class = "text-white fade tf-h1 new-post">New post</p>
+                <!-- New Post -->
+                <div class="flex center spacer">
+                    <p class="text-white fade tf-h1 new-post">New post</p>
+                </div>
+                <form class="flex wrapper-none">
+                    <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info"
+                        name="post-info"></textarea>
+                </form>
+                <!-- Delete and Submit post buttons -->
+                <div class="flex space-evenly">
+                    <p class="text-3rd-glow tf-h1 delete-post-btn">delete</button>
+                    <p class="text-white-glow fade tf-h1" id="newpost-btn">post</button>
+                </div>
+
+                <!--  Push box for created post -->
             </div>
-            <form class = "flex wrapper-none">
-            <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
-        </form>
-            <div class = "flex space-evenly">
-            <p class = "text-3rd-glow tf-h1 delete-post-btn">delete</button>
-            <p class = "text-white-glow fade tf-h1" id = "newpost-btn">post</button>
-            </div> 
-            
+            <div class="pushbox">
+                <div class="post">
+                    <div class="post-content">
+                        <p class="tf-p2 text-white fade">HELLO </p>
+                    </div>
+                    <!-- Icons -->
+                    <div class="post-caption">
+                        <div class="icon-parent">
+                            <!-- Hide Icon -->
+                            <div class="hide icon" id="this-hide"></div>
+                        </div>
+                        <!-- Like Icon -->
+                        <div class="icon-parent">
+                            <div class="like icon" id="this-like"></div>
+                        </div>
+                        <!-- Edit Icon -->
+                        <div class="icon-parent">
+                            <div class="edit icon" id="this-edit"></div>
+                        </div>
+                        <!-- Delete Icon -->
+                        <div class="icon-parent">
+                            <div class="delete icon" id="this-delete"></div>
+                        </div>
+
+                        <!-- Post content -->
+                    </div>
+                </div>
+                <!-- Post 1 -->
+                <div class="post">
+                    <div class="post-content">
+                        <p class="tf-p2 text-white fade">sup charles</p>
+                    </div>
+                    <div class="post-caption">
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="post">
+                    <div class="post-content">
+                        <p class="tf-p2 text-white fade">sup tina</p>
+                    </div>
+                    <div class="post-caption">
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div class="post">
+                    <div class="post-content">
+                        <p class="tf-p2 text-white fade">sup jacob</p>
+                    </div>
+                    <div class="post-caption">
+                    </div>
+                </div>
+                <!-- Post 4 -->
+                <div class="post">
+                    <div class="post-content">
+                        <p class="tf-p2 text-white fade">sup hassan</p>
+                    </div>
+                    <div class="post-caption">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side bar with Topics -->
+            <div class="sidebar" id="right-sidebar">
+                <!--this is the topic browser widget-->
+                <div class="flex center spacer">
+                    <p class="text-white fade tf-h1">topics</p>
+                    <div class="flex center spacer topic-browser">
+                        <p class="tf-p2 text-main topic"><span class="double-fade">01</span> happiness</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">02</span> sadness</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">03</span> madness</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">04</span> badness</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">05</span> openness</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">06</span> humerus</p>
+                        <p class="tf-p2 text-main topic"><span class="double-fade">07</span> bilbo</p>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class = "pushbox">
-            <div class = "post">
-                <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">HELLO </p>
-                </div>
-                <div class = "post-caption">
-                    <div class = "icon-parent">
-                        <div class = "hide icon" id = "this-hide"></div>
-                    </div>
-
-                    <div class = "icon-parent">
-                        <div class= "like icon" id = "this-like"></div>
-                    </div>
-
-                    <div class = "icon-parent">
-                        <div class = "edit icon" id = "this-edit"></div>
-                    </div>
-
-                    <div class = "icon-parent">
-                        <div class = "delete icon" id = "this-delete"></div>
-                    
-                    </div>
-
-
-
-
-
-                </div>  
-            </div>
-            <div class = "post">
-                <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">sup charles</p>
-                </div>
-                <div class = "post-caption">
-                </div>  
-            </div>
-            <div class = "post">
-                <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">sup tina</p>
-                </div>
-                <div class = "post-caption">
-                </div>  
-            </div>
-            <div class = "post">
-                <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">sup jacob</p>
-                </div>
-                <div class = "post-caption">
-                </div>  
-            </div>
-            <div class = "post">
-                <div class = "post-content">
-                    <p class = "tf-p2 text-white fade">sup hassan</p>
-                </div>
-                <div class = "post-caption">
-                </div>  
-            </div>
-        </div>
-        <div class = "sidebar" id="right-sidebar">
-            <!--this is the topic browser widget-->
-            <div class = "flex center spacer">
-                <p class = "text-white fade tf-h1">topics</p>
-                <div class = "flex center spacer topic-browser">
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">01</span> happiness</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">02</span> sadness</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">03</span> madness</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">04</span> badness</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">05</span> openness</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">06</span> humerus</p>
-                    <p class = "tf-p2 text-main topic"><span class="double-fade">07</span> bilbo</p>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="/js/scene.js"></script>
-    <script src="/js/icon-appearance-changes.js"></script>
-    <script src="/js/newpost-frontend.js"></script>
+        <script type="module" src="assets/js/scene.js"></script>
+        <script src="assets/js/icon-appearance-changes.js"></script>
+        <script src="assets/js/newpost-frontend.js"></script>
 </body>
+
 </html>

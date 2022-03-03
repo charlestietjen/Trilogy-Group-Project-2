@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Hide extends Model{}
 
+// Hide Modal
 Hide.init(
     {
         user_id: {

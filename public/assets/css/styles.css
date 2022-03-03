@@ -98,14 +98,6 @@ body {
     z-index: 5;
 }
 
-/* .half{
-    width: 50%;
-}
-
-.half .login-box{
-    width: 50%;
-} */
-
 .left{
     display: flex;
     flex-direction: row;
@@ -126,22 +118,12 @@ body {
     margin: 0 auto;
     width:100%;
 }
-/* .description{
-    width: 40%;
-    background-image: linear-gradient(to bottom, rgba( var(--clr-blk), 0.5 ) , rgba( var(--clr-blk), 0.2));
-    border-radius: 20px;
-    border: 2px inset rgba( var(--clr-main), 0.1);
-    box-shadow: inset 0px 10px 7px 5px rgba( var(--clr-blk), 0.1),
-    0px -15px 15px -15px rgba( var(--clr-blk), 0.2),
-    6px 10px 7px -5px rgba( var(--clr-2nd), 0.025),
-    -6px 10px 7px -5px rgba( var(--clr-3rd), 0.025);
-} */
-
 
 .sign-up-form{
     padding: 1em;
 }
 
+/* Login */
 .login-card {
     width: 90%;
     margin: 1em;
@@ -155,30 +137,13 @@ body {
     flex-grow: 1;
 }
 
-/* .login-left{
-    background: rgb(211, 211, 211, 0.5);
-    padding: 1em;
-}
-
-.login-right{
-    background: rgb( var(--clr-char));
-    padding: 1em;
-} */
-
 .form-group{
     width: 80%;
     position: relative;
     display: flex;
 }
 
-/* input{
-    width: 10rem;
-    height: 2.5rem;
-    padding: 0 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid #585858;
-    color: #f9f9f9;
-} */
+/*  Validation Shake */
 
 .validation {
     position: absolute;
@@ -207,15 +172,9 @@ input:invalid, input:invalid ~ .validation {
     border-radius: 5px;
     background: 
     radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) );
-    /* border: 2px inset rgba( var(--clr-main), 0.1); */
     box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
     color: rgb( var(--clr-wht));
-    /* width: 10rem;
-    height: 2.5rem; */
     padding: 0 0.5rem;
-    
-    /* border: 1px solid #585858; */
-    /* color: #f9f9f9; */
 }
 
 /* The Modal (background) */
@@ -224,8 +183,6 @@ input:invalid, input:invalid ~ .validation {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     border-radius: 0.25rem;
-    /* background: ß
-    radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) ); */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -233,38 +190,33 @@ input:invalid, input:invalid ~ .validation {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
   
   /* Modal Content/Box */
-  .modal-content {
+.modal-content {
     background-color: rgb(var(--clr-main));
     border: 2px inset rgba( var(--clr-main), 0.1);
-    /* box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05); */
-    /* background: ß
-    radial-gradient( rgba( var(--clr-blk), 0.5), rgba( var(--clr-blk), 0.8) ); */
     margin: 15% auto; /* 15% from the top and centered */
     border-radius: 1rem;
-    /* box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05); */
-  
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
-  }
+}
   
   /* The Close Button */
-  .close {
+.close {
     color: none;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 .form-group input:focus {  
     outline:none;
@@ -297,11 +249,10 @@ select {
     font: inherit;
 }
 
-
-
 /*---------------*/
 /* Utilities     */
 /*---------------*/
+
 
 .flex {
     display: flex;
@@ -698,8 +649,7 @@ section {
     display: none;
   }
 
-
-
+/* Post */
 .post {
     width: 94%;
     margin:1em auto;
@@ -772,7 +722,7 @@ section {
 
 .topic-browser::-webkit-scrollbar {
     width: 0.25em;
-  }
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
@@ -818,7 +768,6 @@ section {
     z-index: 7;
     padding-inline: 1em;
     transition: 1s;
-
 }
 
 .menu:hover {
@@ -826,7 +775,6 @@ section {
     z-index: 7;
     transition: 1s;
     background-color: rgba( var(--clr-blk), 0.8 );
-
 }
 
 .menu-item {
@@ -858,6 +806,7 @@ button {
     opacity: 0.5;
 }
 
+/* Color Picker Selector */
 .color-picker {
     width: 60%;
     margin:0em auto 1em;
@@ -874,9 +823,6 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
-    
-
 }
 
 .colorpicker-right {
@@ -917,8 +863,7 @@ button {
     align-items: center;
     transition: 0.25s;
     box-shadow: 0px 10px 7px -5px rgba( var(--clr-blk), 0.5),
-     inset 0px 10px 7px -5px rgba( var(--clr-wht), 0.5);
-    
+     inset 0px 10px 7px -5px rgba( var(--clr-wht), 0.5);    
 }
 
 .icon-parent:hover {
@@ -929,7 +874,7 @@ button {
     0px 0px 10px rgba( var(--clr-wht), 0.5);
 }
 
-
+/* Like icon heat outline */
 .like {
     background-image:
     url('/assets/img/icons/heart_outline.svg');
@@ -937,13 +882,14 @@ button {
     background-position:center;
 }
 
+/* Like icon filled heart */
 .like-fill {
     background-image:
     url('/assets/img/icons/heart_fill.svg');
     background-size: contain;
     background-position: center;
 }
-
+/* Hide icon */
 .hide {
     background-image:
     url('/assets/img/icons/hide.svg');
@@ -951,6 +897,7 @@ button {
     background-position:center;
 }
 
+/* Edit Icon */
 .edit {    
     background-image:
     url('/assets/img/icons/message_writing.svg');
@@ -973,6 +920,7 @@ button {
     background-repeat: no-repeat;
 }
 
+/* Delete Icon */
 .delete {
     background-image:
     url('/assets/img/icons/message_close.svg');
