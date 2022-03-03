@@ -23,7 +23,7 @@ function pickCategory (e){
          console.log(clickedItem)
             if (clickedItem === "make-new") {
                 document.querySelector(".topic-browser").removeEventListener("click", pickCategory);
-                document.querySelector("#make-new").innerHTML = ` <input placeholder="new topic" spellcheck="false" id="new-topic" type="text" name="user" class="form-control topic-input" required> <button id="button" type="submit" class="spacer text-white-glow tf-h1">submit</button>`;
+                document.querySelector(".topic-browser").innerHTML = ` <input placeholder="new topic" spellcheck="false" id="new-topic" type="text" class="form-control topic-input" required> <button id="button" type="submit" class="spacer text-white-glow tf-h1">submit</button>`;
     }
             else { 
                 leftsidebarEl.innerHTML = `<div class = "flex center spacer">
