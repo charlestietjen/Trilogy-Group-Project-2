@@ -27,7 +27,7 @@ async function topicBtnHandler(event){
     event.preventDefault();
     const textField = document.querySelector('#post-info');
     const text = textField.value.trim();
-    const category = this.innerText.trim();
+    const category = this.innerText.toLowerCase().trim();
 
     const response = await fetch('/api/posts', {
         method: 'post',
@@ -40,16 +40,16 @@ async function topicBtnHandler(event){
         }
     });
     if (response.ok){
-        document.location.replace('/');
+        document.location.reload();
     } else {
         alert('Failed to create post');
-        document.location.replace('/');
+        document.location.reload();
     }
 }
 
 document.querySelector('#post-btn').addEventListener('click', createPostHandler);
 document.querySelector('#delete-btn').addEventListener('click', deleteButtonHandler); 
-const topicButtons = document.querySelectorAll('.topic');
+const topicButtons = document.querySelectorAll('.topic-left');
 topicButtons.forEach(btn => {
     btn.addEventListener('click', topicBtnHandler);
 });

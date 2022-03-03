@@ -5,18 +5,19 @@
 
     <div class = "flex wrapper-full push-parent">
         <div class = "sidebar" id="sidebar-left">
-        {{#if loggedIn}}
-        {{>newpost-sidebarinput}}
-        {{else}}
-        {{>login-or-signup}}
-        {{/if}}
-    </div>
-    <div class = "pushbox">
-        {{#each posts as |post|}}
-        {{> singlepost post}}
-        {{/each}}
-    </div>
-    <div class = "sidebar"></div>
-    {{!-- category selector partial goes here --}}
+            {{#if loggedIn}}
+            {{>newpost-sidebarinput}}
+            {{else}}
+            {{>login-or-signup}}
+            {{/if}}
+        </div>
+        <div class = "pushbox">
+            {{#each posts as |post|}}
+            {{> singlepost post}}
+            {{/each}}
+        </div>
+        <div class = "sidebar">
+            {{>topics}}
+        </div>
     </div>
 </div>
