@@ -16,6 +16,7 @@ async function loginFormHandler(event) {
   
       if (response.ok) {
         document.location.replace('/');
+    
     }
     } else {
       alert('Username or password incorrect');
@@ -61,14 +62,7 @@ async function loginFormHandler(event) {
       // return true;  
       // document.location.replace('/');
       // }  
-      // else{  
-      // alert("password must be same!");  
-      // return false;  
-      // }  
-      // }  
-  // }    
-  // }
-  
+
   
 
   document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
