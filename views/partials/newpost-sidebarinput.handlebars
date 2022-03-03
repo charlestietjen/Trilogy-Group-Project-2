@@ -1,19 +1,31 @@
-            <div class = "flex center spacer">
-                <p class = "text-white fade tf-h1 new-post">New post</p>
-            </div>
-            <form class = "flex wrapper-none">
-            <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
-        </form>
-        <div class="flex center">
-        <select class="menu text-white fade tf-h1" name="categories" id="post-categories">
-            <option class="text-white fade tf-h1 menu-item" value="anxiety">Anxiety</option>
-            <option class="text-white fade tf-h1 menu-item" value="mood">Mood</option>
-            <option class="text-white fade tf-h1 menu-item" value="personality">Personality</option>
-            <option class="text-white fade tf-h1 menu-item" value="eating">Eating</option>
-            </select>
-        </div>
-        <div class = "flex space-evenly">
-            <button id="delete-btn" class="text-3rd-glow tf-h1 cursor-pointer">delete</button>
-            <button id="post-btn" class="text-white-glow fade tf-h1 cursor-pointer">post</button>
-        </div> 
-        <script src="/js/create-post.js"></script>
+<div class = "flex center spacer">
+    <p class = "text-white fade tf-h1 new-post">New post</p>
+</div>
+<form class = "flex wrapper-none">
+    <textarea class="text-input tf-p1 text-white fade" spellcheck="false" id="post-info" name="post-info" ></textarea>
+</form>
+{{!-- <div class="flex center">
+    <select class="menu text-white fade tf-h1" name="categories" id="post-categories">
+    <option class="text-white fade tf-h1 menu-item" value="anxiety">Anxiety</option>
+    <option class="text-white fade tf-h1 menu-item" value="mood">Mood</option>
+    <option class="text-white fade tf-h1 menu-item" value="personality">Personality</option>
+<option class="text-white fade tf-h1 menu-item" value="eating">Eating</option>
+</select>
+</div> --}}
+<div class = "flex space-evenly">
+    <button id="delete-btn" class="text-3rd-glow tf-h1 cursor-pointer">delete</button>
+    <button id="post-btn" class="text-white-glow fade tf-h1 cursor-pointer">post</button>
+</div>
+<div class="flex center spacer" id="topic-list" style="display: none;">
+    <p class="text-white fade tf-h1">attach a feeling</p>
+    <div class="flex center spacer topic-browser">
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">01</span> Happy</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">02</span> Sad</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">03</span> Anxious</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">04</span> Self Conscious</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">05</span> Hurt</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">06</span> Guilt</p>
+        <p class="tf-p2 text-white-glow topic cursor-pointer"><span class="double-fade">07</span> Scared</p>
+    </div>
+</div>
+<script src="/js/create-post.js"></script>
