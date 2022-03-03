@@ -27,7 +27,7 @@ async function topicBtnHandler(event){
     event.preventDefault();
     const textField = document.querySelector('#post-info');
     const text = textField.value.trim();
-    const postCategories = ''; 
+    const category = this.innerText.trim();
 
     const response = await fetch('/api/posts', {
         method: 'post',
@@ -43,6 +43,7 @@ async function topicBtnHandler(event){
         document.location.replace('/');
     } else {
         alert('Failed to create post');
+        document.location.replace('/');
     }
 }
 
