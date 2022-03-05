@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Post, Like, Hide } = require('../../models/');
+const key = require('../../config/key');
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
@@ -31,6 +32,11 @@ router.get('/:topic', (req, res) => {
     }]
   })
   .then(dbPostData => {
+    if (!req.session.key){
+      req.session.save(() => {
+        req.session.key = key;
+      });
+    };
     dbPostData = dbPostData.filter(arr => {
       if (arr.hides.some(h => h.user_id === req.session.user_id)){
       return;
@@ -81,6 +87,11 @@ router.get('/', (req, res) => {
       }]
     })
     .then(dbPostData => {
+      if (!req.session.key){
+        req.session.save(() => {
+          req.session.key = key;
+        });
+      };
       dbPostData = dbPostData.filter(arr => {
         if (arr.hides.some(h => h.user_id === req.session.user_id)){
         return;
