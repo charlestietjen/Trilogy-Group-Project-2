@@ -734,20 +734,6 @@ section {
     box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
 }
 
-.post-caption {
-    width: 94%;
-    margin:1em auto;
-    min-height: 3em;
-    border: 2px inset rgba( var(--clr-main), 0.1);
-    background: radial-gradient( rgba( var(--clr-blk), 0.4), rgba( var(--clr-blk), 0.7) ),
-    linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-main), 0.17 ) );
-    border-radius: 3em;
-    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 .text-input {
     width: 90%;
     margin:0em auto 0.3em;
@@ -762,6 +748,34 @@ section {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+.post-content-textarea {
+    width: calc(100% + 2em);
+    margin:-0.5em -1em;
+    padding: 0.5em 1em;
+    min-height: 9.5em;
+    border-radius: 20px;
+    background: 
+    transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.post-caption {
+    width: 94%;
+    margin:1em auto;
+    min-height: 3em;
+    border: 2px inset rgba( var(--clr-main), 0.1);
+    background: radial-gradient( rgba( var(--clr-blk), 0.4), rgba( var(--clr-blk), 0.7) ),
+    linear-gradient(to right, rgba( var(--clr-main), 0.17 ) , rgba( var(--clr-2nd), 0.17 ) , rgba( var(--clr-main), 0.17 ) );
+    border-radius: 3em;
+    box-shadow: inset 0px 15px 7px 5px rgba( var(--clr-blk), 0.05);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .text-input::-webkit-scrollbar {

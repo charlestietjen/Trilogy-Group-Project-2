@@ -4,7 +4,7 @@ const editButtonHandler = function(event) {
   const id = post.getAttribute('data-id');
   let postContent = post.querySelector('.post-content').children[0];
   let editBox = document.createElement("textarea");
-  editBox.classList = 'tf-p1 text-white text-input fullsize';
+  editBox.classList = 'tf-p1 text-white text-input post-content-textarea';
   editBox.value = postContent.innerText;
   tempPostContent = postContent.innerText;
   postContent.parentElement.replaceChild(editBox, postContent);
