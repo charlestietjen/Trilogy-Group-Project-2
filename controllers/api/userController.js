@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const { User, Post, Like, Hide } = require('../../models/');
 const { validateEmail, validatePassword } = require('../../utils/validators');
+const key = require('../../config/key');
+const keyCheck = require('../../utils/keyCheck');
 
 //get users
-router.get('/', (req, res) => {
+router.get('/', keyCheck, (req, res) => {
    User.findAll({
       attributes: { exclude: ['password'] },
    })
@@ -15,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 // get a single user
-router.get('/:id', (req, res) => {
+router.get('/:id', keyCheck, (req, res) => {
    User.findOne({
       attributes: { exclude: ['password'] },
       where: {
@@ -48,7 +50,7 @@ router.get('/:id', (req, res) => {
 });
 
 //account creation expects {email: 'test@test.cool', password: 'goodpassword'}
-router.post('/', (req, res) => {
+router.post('/', keyCheck, (req, res) => {
    //validate email
    if (!validateEmail(req.body.email)){
       res.status(400).json({ message: 'Please enter a valid email!' });
@@ -68,6 +70,7 @@ router.post('/', (req, res) => {
             req.session.user_id = dbUserData.id;
             req.session.email = dbUserData.email;
             req.session.loggedIn = true;
+            req.session.key = key;
             res.json(dbUserData);
          });
       })
@@ -78,7 +81,7 @@ router.post('/', (req, res) => {
 });
 
 //login route expects {email: 'test@test.cool', password: 'goodpassword'}
-router.post('/login', (req, res) => {
+router.post('/login', keyCheck, (req, res) => {
    User.findOne({
       where: {
          email: req.body.email,
@@ -97,13 +100,14 @@ router.post('/login', (req, res) => {
          req.session.user_id = dbUserData.id;
          req.session.email = dbUserData.email;
          req.session.loggedIn = true;
+         req.session.key = key;
          res.json({ user: dbUserData, message: 'Logged in successfully.' });
       });
    });
 });
 
 //logout route
-router.post('/logout', (req, res) => {
+router.post('/logout', keyCheck, (req, res) => {
    if (req.session.loggedIn) {
       req.session.destroy(() => {
          res.status(204).end();
@@ -114,7 +118,7 @@ router.post('/logout', (req, res) => {
 });
 
 //user update - only update data received
-router.put('/:id', (req, res) => {
+router.put('/:id', keyCheck, (req, res) => {
    User.update(req.body, {
       individualHooks: true,
       where: {
@@ -135,7 +139,7 @@ router.put('/:id', (req, res) => {
 });
 
 //delete user route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', keyCheck, (req, res) => {
    User.destroy({
       where: {
          id: req.params.id,

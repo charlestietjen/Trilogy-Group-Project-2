@@ -2,11 +2,12 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Like, Hide } = require('../../models');
 const withAuth = require('../../utils/auth');
+const keyCheck = require('../../utils/keyCheck');
 const { slangExists } = require('../../utils/validators');
 const Sequelize = require('sequelize');
 
 //get all posts
-router.get('/', (req, res) => {
+router.get('/', keyCheck, (req, res) => {
    Post.findAll({
       //
       attributes: ['id', 'text', 'category', 'created_at'],
@@ -40,7 +41,7 @@ router.get('/', (req, res) => {
       });
 });
 // get post by id
-router.get('/:id', (req, res) => {
+router.get('/:id', keyCheck, (req, res) => {
    Post.findOne({
       where: {
          id: req.params.id,
@@ -70,7 +71,7 @@ router.get('/:id', (req, res) => {
       });
 });
 // create post, expects {text: "example post", user_id: 1}
-router.post('/', (req, res) => {
+router.post('/', keyCheck, (req, res) => {
    if (req.session) {
       if (slangExists(req.body.text)) {
          return res.status(400).json({ status: 'Please remove the slang or bad words from your post' });
@@ -89,7 +90,7 @@ router.post('/', (req, res) => {
    }
 });
 // like post
-router.put('/like', (req, res) => {
+router.put('/like', keyCheck, (req, res) => {
    if (req.session) {
       Like.create({
          user_id: req.body.user_id || req.session.user_id,
@@ -103,7 +104,7 @@ router.put('/like', (req, res) => {
    }
 });
 // unlike
-router.put('/unlike', (req, res) => {
+router.put('/unlike', keyCheck, (req, res) => {
    if (req.session) {
       Like.destroy({
          where: {
@@ -119,7 +120,7 @@ router.put('/unlike', (req, res) => {
    }
 });
 // hide post
-router.put('/hide', (req, res) => {
+router.put('/hide', keyCheck, (req, res) => {
    if (req.session) {
       Hide.create({
          user_id: req.body.user_id || req.session.user_id,
@@ -162,7 +163,7 @@ router.put('/:id', withAuth, (req, res) => {
    }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', keyCheck, (req, res) => {
    console.log('id', req.params.id);
    Post.destroy({
       where: {

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
+const key = require('../../config/key');
 const { User, Post, Like } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -16,6 +17,11 @@ router.get('/', withAuth, (req, res) => {
       }
     })
     .then(dbPostData => {
+      if (!req.session.key){
+        req.session.save(() => {
+          req.session.key = key;
+        })
+      };
       const posts = dbPostData.map(post => {
         thisPost = post.get({ plain: true });
         if(thisPost.user_id == req.session.user_id) {
