@@ -746,7 +746,7 @@ section {
 
 .text-input {
     width: 90%;
-    margin:0em auto 1em;
+    margin:0em auto 0.3em;
     padding: 0.5em 0.8em;
     min-height: 12em;
     border-radius: 20px;
@@ -775,7 +775,7 @@ section {
     justify-content: center;
     max-width: 80%;
     margin: 0 auto;
-    height: 14em;
+    height: 35vh;
 }
 
 .topic-browser::-webkit-scrollbar {
@@ -801,6 +801,7 @@ section {
     color: rgba( var(--clr-2nd), 0.8 );
     text-indent: -1.8em;
     margin-left: 1.8em;
+    text-transform: lowercase;
 
 }
 
@@ -1005,4 +1006,11 @@ button {
     text-shadow :0px 0px 15px rgba( var(--clr-blk), 1),
     2px 2px 5px rgba( var(--clr-blk), 1);
     color: rgba( var(--clr-main), 1 );
+}
+
+.clearbutton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
