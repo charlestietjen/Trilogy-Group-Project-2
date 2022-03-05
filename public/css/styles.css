@@ -657,6 +657,10 @@ section {
     
 }
 
+.wrapper {
+    padding-inline: 0;
+}
+
 .scroller {
     width: 80%;
     height: 70vh;
@@ -746,7 +750,7 @@ section {
 
 .text-input {
     width: 90%;
-    margin:0em auto 1em;
+    margin:0em auto 0.3em;
     padding: 0.5em 0.8em;
     min-height: 12em;
     border-radius: 20px;
@@ -775,7 +779,7 @@ section {
     justify-content: center;
     max-width: 80%;
     margin: 0 auto;
-    height: 14em;
+    height: 35vh;
 }
 
 .topic-browser::-webkit-scrollbar {
@@ -801,6 +805,7 @@ section {
     color: rgba( var(--clr-2nd), 0.8 );
     text-indent: -1.8em;
     margin-left: 1.8em;
+    text-transform: lowercase;
 
 }
 
@@ -1006,3 +1011,94 @@ button {
     2px 2px 5px rgba( var(--clr-blk), 1);
     color: rgba( var(--clr-main), 1 );
 }
+
+.clearbutton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .scroller {
+        position: relative;
+        top: 90vh;
+        width: 100%;
+        height: 100%;
+        min-height: 80vh;
+        border-left: none;
+        border-right: none;
+    }
+
+    .blurfilter {
+        height: 75vh;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .menu {
+        height: fit-content;
+    }
+
+    .menu:hover {
+        height: fit-content;
+    }
+
+    .menu-item {
+        font-size: 24px;
+
+    }
+
+    .blurh2 {
+        margin: 1em auto 0;
+    }
+
+    .push-parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pushbox {
+        min-height: 45vh;
+        width: 85%;
+    }
+
+    .sidebar {width:80%;}
+
+    .clearbutton {font-size: 18px;}
+
+    .writeup-box {
+        position: relative;
+        top: 50vh;
+        width: 100%;
+        height: 100%;
+        min-height: 80vh;
+        border-left: none;
+        border-right: none;
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .login-box {
+        position: relative;
+        top: 0;
+        transform: translate( 0%, 0%);
+        width: 100vw;}
+
+    .login-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bluraboutus {
+        transform: translate(-40%, 0%) rotate(-90deg);
+        
+    }
+
+  }
