@@ -47,7 +47,7 @@ This will install all dependencies required to run the application.
 Required modules can be reviewed in the package.json.
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to an .env file in the root of the application:
 
 `DB_NAME='spacedout_db'`
 `DB_USER='root'`
